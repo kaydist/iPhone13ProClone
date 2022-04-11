@@ -9,17 +9,22 @@ html{
     color: rgb(29, 29, 31);
     font-size: 1.1vw;
 }
-
-@media screen and (max-width: 787px){
-    html{
-    font-family: 'Poppins', sans-serif;
-    color: rgb(29, 29, 31);
-    font-size: 4.2vw;
-}
-}
-
 body{
     overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 767px){
+    html{
+        font-family: 'Poppins', sans-serif;
+        color: rgb(29, 29, 31);
+        font-size: 62%;
+    }
+    body{
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        font-size: 1.6rem;
+    }
 }
 
 
@@ -123,7 +128,7 @@ nav button{
 }
 
 .second-section-text{    
-    padding: 10em 3em 6em;
+    padding: 10em 15% 6em;
     font-size: 4rem;
     font-weight: 700;
     color: #f5f5f760;
@@ -145,6 +150,7 @@ nav button{
 .third-section{
     width: 100vw;
     position: relative;    
+    overflow: hidden;
 }
 
 .third-section-text{    
@@ -152,12 +158,13 @@ nav button{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-around;    
+    font-weight: 600;
+    font-size: 1.5rem
 }
 
 .third-section-text .phone-size{
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 2.5rem;
 }
 
 .third-section-text .left-text{
@@ -170,9 +177,9 @@ nav button{
 .third-section-image{
     position: absolute;
     display: flex;
-    top: 10%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -10%);
+    transform: translate(-50%, -50%);
 }
 
 .third-section .small-phone{
@@ -190,6 +197,7 @@ nav button{
     min-height: 100vh;
     width: 100vw;
     display: flex;
+    flex-wrap: wrap;
     position: relative;
     z-index: 2;
     overflow: hidden;
@@ -415,10 +423,11 @@ nav button{
     width: 100vw;
     position: relative;
     overflow: hidden;
+    background-color: #fbfbfd;
 }
 
 .eighth-section p{    
-    padding: 25vh 3em 1em;
+    padding: 25vh 3em 18em;
     font-size: 3rem;
     font-weight: 700;
     color: #86868b;
@@ -433,8 +442,8 @@ nav button{
 
 .eighth-section img{
     position: absolute;
-    top: 65vh;
-    right: -50%;
+    bottom: 5%;
+    right: -75%;
     z-index: 2;
     transform: scale(0.8)
 }
@@ -1157,4 +1166,94 @@ nav button{
     position: relative;
     z-index: 1;
     gap: 4em;
+}
+
+
+@media screen and (max-width: 767px) {
+    nav {
+        padding: 1rem 12%;
+    }
+
+    .second-section, .third-section-text{
+        min-height: 100vh;
+    }
+    
+    .second-section-text{    
+        padding: 10em 10% 6em;
+        margin: 0;
+        font-size: 2.5rem;
+        width:fit-content ;
+    }  
+    
+    .third-section-text{      
+        padding: 30% 0;
+    }
+
+    .third-section-text{ 
+        align-items: flex-start;
+    }
+    .third-section-text .text-container{
+        overflow-x: hidden
+    }
+    .third-section-text .left-text{
+        text-align: left;
+    }
+
+    .fourth-section, .fifth-section, .sixth-section{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr)
+    }
+    .fifth-section > .fifth-section-left{
+        grid-column: 1;
+        grid-row: 2; /* NEW */
+    }
+    .fifth-section > .fifth-section-right{
+        grid-column: 1;
+        grid-row: 1; /* NEW */
+    }
+    .fourth-section .purchase-left, .fifth-section-left{
+        width: 100vw;
+    }
+    .purchase-right .phone {
+        position: absolute;
+        bottom: 12%;
+        right: -35%;
+        width: 100%;
+        object-fit: contain;
+        transform: scale(1.5);
+    }
+
+    /* seventh section */
+
+    .seventh-section{
+        min-height: 100vh;
+        justify-content: end;
+    }
+
+    .seventh-section p{
+        font-size: 1.15rem;
+        font-weight: 500;
+        text-align: center;
+        padding: 4em 0;
+    }
+
+    .seventh-section img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.3);
+    }
+
+    .eighth-section p{    
+        padding: 5em 0 0;
+        margin-bottom: 12em;
+        width:fit-content ;
+    }
+    .eighth-section img{
+        position: absolute;
+        bottom: 0%;
+        left: -210%;
+        z-index: 2;
+        transform: scale(0.4)
+    }
 }
