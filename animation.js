@@ -276,34 +276,52 @@ if(window.innerWidth >= "768"){
 
 //eight page
 
-// const eighthPageImgIn = gsap.timeline({
-//     scrollTrigger:{
-//         trigger: ".eighth-section",
-//         start: "-30%",
-//         end: "0%",
-//         scrub: true,
-//     }
-// })
-
-// eighthPageImgIn.fromTo(
-//     ".eighth-section img",
-//     {y: 2000},
-//     {y: 0}
-// )
-
 // if(window.innerWidth >= "768"){
-// gsap.set(".eighth-section p", {padding: "90vh 0 1em"})
+//     const eighthPageImgIn = gsap.timeline({
+//         scrollTrigger:{
+//             trigger: ".eighth-section",
+//             markers: {startPoint: "red", endPoint: "green"},
+//             start: "-15%",
+//             end: "0%",
+//             scrub: true,
+//         }
+//     })
+//     gsap.set(".eighth-section img", {top: "30%"})
+//     eighthPageImgIn.fromTo(
+//         ".eighth-section img",
+//         {y: 500},
+//         {y: 0}
+//     )
+//     gsap.set(".eighth-section p", {padding: "90vh 10% 1em"})
+
 // }else{    
-// gsap.set(".eighth-section p", {padding: "60vh 0 0"})
+//     const eighthPageImgIn = gsap.timeline({
+//         scrollTrigger:{
+//             trigger: ".eighth-section",
+//             markers: {startPoint: "red", endPoint: "green"},
+//             start: "-400em",
+//             end: "-350em",
+//             scrub: true,
+//         }
+//     })
+//     gsap.set(".eighth-section img", {top: "30vh"})
+//     eighthPageImgIn.fromTo(
+//         ".eighth-section img",
+//         {y: 500},
+//         {y: 0}
+//     )
+//     gsap.set(".eighth-section p", {padding: "80vh 5% 2em"})
+    
 // }
 // gsap.set(".eighth-section img", {position: "fixed"})
 // const eighthPageImgCon = gsap.timeline({
 //     scrollTrigger:{
 //         trigger: ".eighth-section",
-//         start: "0%",
+//         start: "-0%",
 //         end: "50%",
 //         scrub: true,
 //         pin: true,
+//         pinSpacing: false
 //     },
 // })
 // eighthPageImgCon.fromTo(

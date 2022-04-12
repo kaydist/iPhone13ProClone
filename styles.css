@@ -442,9 +442,9 @@ nav button{
 .eighth-section img{
     position: absolute;
     bottom: 5%;
-    right: -75%;
+    right: 25em;
     z-index: 2;
-    transform: scale(0.8)
+    transform: translate(50%, 5%) scale(0.8)
 }
 
 
@@ -484,7 +484,7 @@ nav button{
 
 .ninth-section .sub-heading{
     font-size: 1.2rem;
-    color: #6e6e73;
+    color:#86868b;
 }
 
 .ninth-section video{
@@ -505,8 +505,9 @@ nav button{
     max-width: 100%;
 }
 .image-component .image-component-desc-body{
-    color: #6e6e73;
+    color: #86868b;
     font-weight: 600;
+    font-size: 1.2rem;
 }
 
 
@@ -611,6 +612,7 @@ nav button{
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;  
+    max-width: 65%;
 }
 
 .image-component-5 .image-component-desc-heading{
@@ -722,7 +724,7 @@ nav button{
 }
 
 .twelvth-section .twelvth-section-heading{
-    font-size: 6rem;
+    font-size: 7rem;
     background-color: #ffffff;
     line-height: 1;
     font-weight: 700;
@@ -743,6 +745,7 @@ nav button{
     font-size: 1.5rem;
     display: flex;
     justify-content: flex-end;
+    margin-top: 0.6rem;
 }
 
 .twelvth-section .astronut-video{
@@ -790,11 +793,11 @@ nav button{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 3em;
 }
 
 .image-component-10 .image-component-desc p{
     max-width: 85%;
-    font-size: 1.15rem;
     font-weight: 500;
 }
 
@@ -1225,7 +1228,7 @@ nav button{
     /* seventh section */
 
     .seventh-section{
-        min-height: 100vh;
+        min-height: 95vh;
         justify-content: end;
     }
 
@@ -1237,22 +1240,85 @@ nav button{
     }
 
     .seventh-section img{
+        max-height: 90%;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%) scale(0.3);
+        transform: translate(-50%, -50%) scale(0.5);
     }
 
     .eighth-section p{    
-        padding: 5em 0 0;
+        padding: 5em 5% 0;
         margin-bottom: 12em;
         width:fit-content ;
     }
     .eighth-section img{
         position: absolute;
-        bottom: 0%;
-        left: -210%;
+        bottom: -5%;
+        right: -2em;
         z-index: 2;
-        transform: scale(0.4)
+        transform: translate(50%, 5%) scale(0.4)
+    }
+
+    .ninth-section-flower, .ninth-section video{
+        height: 50vh;
+    }
+    
+    .ninth-section-columns{
+        padding: 6% 5%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5em;
+    }
+
+    .image-component{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;    
+    }
+    .image-component-1, .image-component-3, .image-component-5, .image-component-7{
+        flex-direction: column-reverse;
+    }
+    .image-component-1 .image-component-desc-heading , .image-component-7 .image-component-desc-heading, .twelvth-section .twelvth-section-heading{
+        font-size: 4.5rem;
+        font-weight: 500;
+    }
+    .image-component-1 .image-component-desc-body, .image-component-1 .image-component-desc-heading, .image-component-5 div, .image-components-5 img, .image-component-5 .image-component-desc, .image-component-7 img, .image-component-8 .image-component-desc, .image-component-10 .image-component-desc p {
+        max-width: 100%;
+    }
+
+    .image-component-5, .image-component-6, .image-component-7, .twelvth-section .image-component-10{
+        padding: 0;
+    }
+    
+    .image-component-desc, .image-component-1 .image-component-desc, .image-component-2, .image-component-3 .image-component-desc, .image-component-5 .image-component-desc, .image-component-6 .image-component-desc, .image-component-7 .image-component-desc, .image-component-8 .image-component-desc, .image-component-9 .image-component-desc, .twelvth-section .twelvth-section-heading .large-text{
+        padding: 0 5%;
+    }
+
+    .image-component-2 .image-component-desc, .image-component-6 .image-component-desc, .image-component-8 .image-component-desc, .twelvth-section-heading .small-text {
+        align-items: flex-start;
+    }
+    
+    .twelvth-section-heading .small-text {
+        justify-content: flex-start;
+    }
+
+    .image-component-2 .image-component-desc-heading, .image-component-3 .image-component-desc-heading, .image-component-5 .image-component-desc-heading, .image-component-6 .image-component-desc-heading, .image-component-9 .image-component-desc-heading{
+        font-size: 2.5rem
+    }
+
+    .image-component-10 .image-component-desc span{
+        font-size: 2rem;
+    }
+
+    .image-component-5 img, .image-component-7 img{
+        transform: scale(1);
+    }
+    .image-component-8 img, .image-component-9 img{
+        display: none;
+    }
+    
+    .twelvth-section .twelvth-section-heading{
+        max-width: 70%;
     }
 }
