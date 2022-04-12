@@ -18,7 +18,7 @@ body{
     html{
         font-family: 'Poppins', sans-serif;
         color: rgb(29, 29, 31);
-        font-size: 62%;
+        font-size: 100%;
     }
     body{
         overflow-x: hidden;
@@ -1180,10 +1180,10 @@ nav button{
         min-height: 100vh;
     }
     
-    .second-section-text{    
+    .second-section-text, .eighth-section p{    
         padding: 10em 10% 6em;
         margin: 0;
-        font-size: 2.5rem;
+        font-size: 2rem;
         width:fit-content ;
     }  
     
@@ -1276,26 +1276,38 @@ nav button{
         flex-direction: column;
         gap: 3rem;    
     }
-    .image-component-1, .image-component-3, .image-component-5, .image-component-7{
+
+    .image-component-1, .image-component-3, .image-component-5, .image-component-7, .image-component-12, .image-component-13{
         flex-direction: column-reverse;
     }
+
     .image-component-1 .image-component-desc-heading , .image-component-7 .image-component-desc-heading, .twelvth-section .twelvth-section-heading{
         font-size: 4.5rem;
         font-weight: 500;
     }
-    .image-component-1 .image-component-desc-body, .image-component-1 .image-component-desc-heading, .image-component-5 div, .image-components-5 img, .image-component-5 .image-component-desc, .image-component-7 img, .image-component-8 .image-component-desc, .image-component-10 .image-component-desc p {
+    .image-component-2 .image-component-desc-heading, .image-component-3 .image-component-desc-heading, .image-component-5 .image-component-desc-heading, .image-component-6 .image-component-desc-heading, .image-component-9 .image-component-desc-heading{
+        font-size: 2.5rem
+    }
+    .customize-text .large-text, .fourteenth-section .fourteenth-section-heading{
+        font-size: 3.5rem;
+    }
+    .customize-text .small-text, .fourteenth-section .fourteenth-section-heading .small-text{
+        font-size: 1.8rem;
+    }
+
+    .image-component-1 .image-component-desc-body, .image-component-1 .image-component-desc-heading, .image-component-5 div, .image-components-5 img, .image-component-5 .image-component-desc, .image-component-7 img, .image-component-8 .image-component-desc, .image-component-10 .image-component-desc p, .image-component-12 .image-component-desc, .image-component-13 .image-component-desc p{
         max-width: 100%;
     }
 
-    .image-component-5, .image-component-6, .image-component-7, .twelvth-section .image-component-10{
+    .image-component-5, .image-component-6, .image-component-7, .twelvth-section .image-component-10, .customize-text p, .image-component-12, .image-component-13, .thirteenth-section, .fourteenth-section .image-component-14, .fourteenth-section-sub-2-fusion{
         padding: 0;
     }
     
-    .image-component-desc, .image-component-1 .image-component-desc, .image-component-2, .image-component-3 .image-component-desc, .image-component-5 .image-component-desc, .image-component-6 .image-component-desc, .image-component-7 .image-component-desc, .image-component-8 .image-component-desc, .image-component-9 .image-component-desc, .twelvth-section .twelvth-section-heading .large-text{
+    .image-component-desc, .image-component-1 .image-component-desc, .image-component-2, .image-component-3 .image-component-desc, .image-component-5 .image-component-desc, .image-component-6 .image-component-desc, .image-component-7 .image-component-desc, .image-component-8 .image-component-desc, .image-component-9 .image-component-desc, .twelvth-section .twelvth-section-heading .large-text, .customize-text p, .fourteenth-section .fourteenth-section-heading{
         padding: 0 5%;
     }
 
-    .image-component-2 .image-component-desc, .image-component-6 .image-component-desc, .image-component-8 .image-component-desc, .twelvth-section-heading .small-text {
+    .image-component-2 .image-component-desc, .image-component-6 .image-component-desc, .image-component-8 .image-component-desc, .twelvth-section-heading .small-text, .fourteenth-section .fourteenth-section-heading {
         align-items: flex-start;
     }
     
@@ -1303,13 +1315,6 @@ nav button{
         justify-content: flex-start;
     }
 
-    .image-component-2 .image-component-desc-heading, .image-component-3 .image-component-desc-heading, .image-component-5 .image-component-desc-heading, .image-component-6 .image-component-desc-heading, .image-component-9 .image-component-desc-heading{
-        font-size: 2.5rem
-    }
-
-    .image-component-10 .image-component-desc span{
-        font-size: 2rem;
-    }
 
     .image-component-5 img, .image-component-7 img{
         transform: scale(1);
@@ -1320,5 +1325,55 @@ nav button{
     
     .twelvth-section .twelvth-section-heading{
         max-width: 70%;
+    }
+
+    .customize-text{
+        margin-bottom: 20em;
+    }
+    .customize-camera-phone{
+        top: 20%;
+        right: 30%;
+    }
+
+    .customize-camera-phone img {
+        height: 100%;
+    }
+    .customize-camera-phone video {  
+        left: 51%;
+        border-radius: 3.2rem;
+    }
+    .image-component-12 img {
+        float: left;
+        width: 70%;
+    }
+
+    .image-component-13{
+        top: -2em;
+    }
+    .image-component-13 .left-image{
+        top: 0;
+    }
+    .image-component-13 .left-image img{
+        width: 100%;
+    }
+    .image-component-13 .right-image img{
+        width: 85%;
+        height: 100%;
+        float: right;
+    }
+
+    .fourteenth-section{
+        padding: 5rem 0;
+    }
+    .fourteenth-section-heading p{
+        text-align: left;
+    }
+
+    .fourteenth-section .fourteenth-section-heading .small-text{
+        margin-top: 0;
+    }
+    
+    .fourteenth-section .image-component-14{
+        margin-bottom: 20%;
     }
 }
