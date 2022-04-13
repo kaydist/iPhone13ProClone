@@ -960,14 +960,14 @@ nav button{
     margin-top: 4rem;
 }
 
-.fourteenth-section .astronut-video{
+.fourteenth-section .astronut-photo{
     display: flex;
     justify-content: center;
     flex-direction: column;
     position: relative;   
 }
 
-.fourteenth-section .astronut-video img{
+.fourteenth-section .astronut-photo img{
     position: relative;
     z-index: 1;
     transform: scale(0.7);
@@ -1140,7 +1140,7 @@ nav button{
 .image-component-16 span{
     display: block;
     font-size: 2.5rem;    
-    font-weight: 500;
+    font-weight: 600;
 }
 
 
@@ -1274,36 +1274,36 @@ nav button{
     .image-component{
         display: flex;
         flex-direction: column;
-        gap: 3rem;    
+        gap: 2rem;    
     }
 
     .image-component-1, .image-component-3, .image-component-5, .image-component-7, .image-component-12, .image-component-13{
         flex-direction: column-reverse;
     }
 
-    .image-component-1 .image-component-desc-heading , .image-component-7 .image-component-desc-heading, .twelvth-section .twelvth-section-heading{
+    .image-component-1 .image-component-desc-heading , .image-component-7 .image-component-desc-heading, .twelvth-section .twelvth-section-heading, .sixteenth-section .sixteenth-section-heading{
         font-size: 4.5rem;
         font-weight: 500;
     }
     .image-component-2 .image-component-desc-heading, .image-component-3 .image-component-desc-heading, .image-component-5 .image-component-desc-heading, .image-component-6 .image-component-desc-heading, .image-component-9 .image-component-desc-heading{
         font-size: 2.5rem
     }
-    .customize-text .large-text, .fourteenth-section .fourteenth-section-heading{
+    .customize-text .large-text, .fourteenth-section .fourteenth-section-heading, .fifteenth-section .fifteenth-section-heading{
         font-size: 3.5rem;
     }
-    .customize-text .small-text, .fourteenth-section .fourteenth-section-heading .small-text{
+    .customize-text .small-text, .fourteenth-section .fourteenth-section-heading .small-text, .fourteenth-section-sub-2-fusion .image-component-18 span, .image-component-16 span{
         font-size: 1.8rem;
     }
 
-    .image-component-1 .image-component-desc-body, .image-component-1 .image-component-desc-heading, .image-component-5 div, .image-components-5 img, .image-component-5 .image-component-desc, .image-component-7 img, .image-component-8 .image-component-desc, .image-component-10 .image-component-desc p, .image-component-12 .image-component-desc, .image-component-13 .image-component-desc p{
+    .image-component-1 .image-component-desc-body, .image-component-1 .image-component-desc-heading, .image-component-5 div, .image-components-5 img, .image-component-5 .image-component-desc, .image-component-7 img, .image-component-8 .image-component-desc, .image-component-10 .image-component-desc p, .image-component-12 .image-component-desc, .image-component-13 .image-component-desc p, .image-component-14 .image-component-desc p, .fourteenth-section-sub-2-fusion .image-component-18 span, .fourteenth-section-sub-2-fusion .deep-fusion-img-2 img, .image-component-15 .image-component-desc p{
         max-width: 100%;
     }
 
-    .image-component-5, .image-component-6, .image-component-7, .twelvth-section .image-component-10, .customize-text p, .image-component-12, .image-component-13, .thirteenth-section, .fourteenth-section .image-component-14, .fourteenth-section-sub-2-fusion{
+    .image-component-5, .image-component-6, .image-component-7, .twelvth-section .image-component-10, .customize-text p, .image-component-12, .image-component-13, .thirteenth-section, .fourteenth-section .image-component-14, .fourteenth-section-sub-2-fusion, .fourteenth-section-sub-2 .fourteenth-section-heading img{
         padding: 0;
     }
     
-    .image-component-desc, .image-component-1 .image-component-desc, .image-component-2, .image-component-3 .image-component-desc, .image-component-5 .image-component-desc, .image-component-6 .image-component-desc, .image-component-7 .image-component-desc, .image-component-8 .image-component-desc, .image-component-9 .image-component-desc, .twelvth-section .twelvth-section-heading .large-text, .customize-text p, .fourteenth-section .fourteenth-section-heading{
+    .image-component-desc, .image-component-1 .image-component-desc, .image-component-2, .image-component-3 .image-component-desc, .image-component-5 .image-component-desc, .image-component-6 .image-component-desc, .image-component-7 .image-component-desc, .image-component-8 .image-component-desc, .image-component-9 .image-component-desc, .twelvth-section .twelvth-section-heading .large-text, .customize-text p, .fourteenth-section .fourteenth-section-heading p, .sixteenth-section .sixteenth-section-heading{
         padding: 0 5%;
     }
 
@@ -1356,13 +1356,13 @@ nav button{
     .image-component-13 .left-image img{
         width: 100%;
     }
-    .image-component-13 .right-image img{
-        width: 85%;
+    .image-component-13 .right-image img, .image-component-15 img{
+        width: 95%;
         height: 100%;
         float: right;
     }
 
-    .fourteenth-section{
+    .fourteenth-section, .sixteenth-section .image-component-16{
         padding: 5rem 0;
     }
     .fourteenth-section-heading p{
@@ -1376,4 +1376,29 @@ nav button{
     .fourteenth-section .image-component-14{
         margin-bottom: 20%;
     }
+
+    .fourteenth-section .astronut-photo{
+        max-height: 80vh;
+        align-items: center;
+    }
+    .fourteenth-section .astronut-photo img{
+        transform: scale(0.6);
+    }
+    .fourteenth-section .fourteenth-section-heading img, .fourteenth-section-sub-2-fusion .deep-fusion-img-2 img{
+        height: 95vh;
+        object-fit: cover;
+    }
+    .fourteenth-section-sub-2 .fourteenth-section-heading img{
+        margin: 20% 0;
+    }
+
+    .hand-container img{
+        position: relative;
+        top: 0%;
+        left: 0%;
+        transform: translate(0%, 0%) scale(1);
+        transform-origin: top left;
+        z-index: 2;
+    }
+
 }

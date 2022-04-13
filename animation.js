@@ -1,6 +1,11 @@
 
 //hero page 
-
+let currentScreenSize = "mobile"
+if(window.innerWidth >= "768"){
+    currentScreenSize = "notMobile"
+}else{
+    currentScreenSize = "mobile"
+}
 
 const firstPageIN = gsap.timeline()
 firstPageIN.fromTo(
@@ -652,7 +657,7 @@ fourteenthPage.fromTo(
     {y: 80, opacity: 0},
     {y: 0, opacity: 1,
         scrollTrigger:{
-            trigger: ".fourteenth-section .astronut-video img",  
+            trigger: ".fourteenth-section .astronut-photo img",  
             start: "-25%",
             end: "5%",
             scrub: true
@@ -804,38 +809,75 @@ cameraLabels.fromTo(
 
 
 //16th section
-gsap.set(".sixteenth-section .sixteenth-section-heading", {opacity: "0", padding: "0rem 2em", top: "-30%"})
-gsap.set(".hand-container img", {top: "50%", right: "-30%", transform: "translate(30%, 50%) scale(2)"})
+if(currentScreenSize !== "mobile"){
+    gsap.set(".sixteenth-section .sixteenth-section-heading", {opacity: "0", padding: "0rem 2em", top: "-30%"})
+    gsap.set(".hand-container img", {top: "50%", right: "-30%", transform: "translate(30%, 50%) scale(2)"})
+    const sixteenthPage= gsap.timeline({
+        scrollTrigger:{
+            trigger: ".sixteenth-section",  
+            start: "0%",
+            end: "120%",
+            scrub: true,
+            pin: true
+        }
+    })
+    
+    sixteenthPage.fromTo(
+        ".sixteenth-section .image-component-16",
+        {opacity: 1},
+        {opacity: 0},  
+    )
+    sixteenthPage.fromTo(
+        ".hand-container img",
+        {y: "50%"},
+        {y: "5%"},
+    )
+    
+    sixteenthPage.fromTo(
+        ".hand-container img",
+        {top: "5%", right: "-30%", transform: "translate(30%, -5%) scale(2)"},
+        {top: "5%", right: "-18%", transform: "translate(18%, -5%) scale(1)"}
+    )
+    sixteenthPage.fromTo(
+        ".sixteenth-section .sixteenth-section-heading",
+        {opacity: 0, y: 40},
+        {opacity: 1, y: 0},
+        "<"
+    )
+}else{
+    gsap.set(".sixteenth-section .sixteenth-section-heading", {opacity: "0", padding: "0rem 5%"})
+    gsap.set(".hand-container img", {top: "90%", left: "40%", transform: "translate(-40%, 90%) scale(2)", transformOrigin: "left top"})
+    const sixteenthPage= gsap.timeline({
+        scrollTrigger:{
+            trigger: ".sixteenth-section",  
+            start: "0%",
+            end: "120%",
+            scrub: true,
+            pin: true
+        }
+    })
+    
+    sixteenthPage.fromTo(
+        ".sixteenth-section .image-component-16",
+        {opacity: 1},
+        {opacity: 0},  
+    )
+    sixteenthPage.fromTo(
+        ".hand-container img",
+        {y: "50%"},
+        {y: "-45%"},
+    )
+    
+    sixteenthPage.fromTo(
+        ".hand-container img",
+        {top: "-45%", left: "40%", transform: "translate(-40%, 45%) scale(2)"},
+        {top: "-45%", left: "35%", transform: "translate(-15%, 45%) scale(1)"}
+    )
+    sixteenthPage.fromTo(
+        ".sixteenth-section .sixteenth-section-heading",
+        {opacity: 0, y: 150},
+        {opacity: 1, y: "-300%"},
+        "<"
+    )
+}
 
-const sixteenthPage= gsap.timeline({
-    scrollTrigger:{
-        trigger: ".sixteenth-section",  
-        start: "0%",
-        end: "120%",
-        scrub: true,
-        pin: true
-    }
-})
-
-sixteenthPage.fromTo(
-    ".sixteenth-section .image-component-16",
-    {opacity: 1},
-    {opacity: 0},  
-)
-sixteenthPage.fromTo(
-    ".hand-container img",
-    {y: "50%"},
-    {y: "5%"},
-)
-
-sixteenthPage.fromTo(
-    ".hand-container img",
-    {top: "5%", right: "-30%", transform: "translate(30%, -5%) scale(2)"},
-    {top: "5%", right: "-18%", transform: "translate(18%, -5%) scale(1)"}
-)
-sixteenthPage.fromTo(
-    ".sixteenth-section .sixteenth-section-heading",
-    {opacity: 0, y: 40},
-    {opacity: 1, y: 0},
-    "<"
-)
