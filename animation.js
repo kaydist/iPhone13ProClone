@@ -351,17 +351,66 @@ const twelvthPage = gsap.timeline({
     }
 })
 
+
 const astronutPhone = document.querySelector(".twelvth-section .astronut-video .phone-casing")
 const astronutPhoneUI = document.querySelector(".twelvth-section .astronut-video .phone-interface")
 const astronutVideo = document.querySelector(".twelvth-section .astronut-video video")
-const videoHeight = 0.53 * astronutPhone.clientHeight
-const videoWidth = 0.57 * astronutPhone.clientWidth
-const interfaceHeight = 0.98 * astronutPhone.clientHeight
-const interfaceWidth =  0.9 * astronutPhone.clientWidth
+
+// function for changing vid based on screen size
+const video = document.querySelectorAll(".twelvth-section .astronut-video video")
+//add source to video tag
+function addSourceToVideo(element, src) {
+    var source = document.createElement('source');
+    source.src = src;
+    source.type = 'video/mp4';
+	console.log(src);
+    element.appendChild(source);
+	
+}
+
+//determine screen size and select mobile or desktop vid
+function whichSizeVideo(element, src) {
+	if (currentScreenSize !== "mobile" ) {
+		addSourceToVideo( element, src.dataset.desktopVid);
+	} else {
+		addSourceToVideo(element, src.dataset.mobileVid);
+	}
+}
 
 
-gsap.set(".astronut-video video", {width: videoHeight, height: videoWidth})
-gsap.set(".astronut-video .phone-interface", {width: interfaceHeight, height: interfaceWidth})
+
+function videoSize() {
+	if (astronutVideo !== undefined) {
+    video.forEach(function(element, index) {
+			whichSizeVideo(  
+				element, //element
+				element  //src locations
+			);	
+		});
+	}
+}
+videoSize();
+//eend of function
+
+
+if(currentScreenSize !== "mobile"){
+    const videoHeight = 0.58 * astronutPhone.clientHeight
+    const videoWidth = 0.53 * astronutPhone.clientWidth
+    const interfaceHeight = 0.98 * astronutPhone.clientHeight
+    const interfaceWidth =  0.9 * astronutPhone.clientWidth
+    gsap.set(".astronut-video video", {width: videoHeight, height: videoWidth})
+    gsap.set(".astronut-video .phone-interface", {width: interfaceHeight, height: interfaceWidth})    
+    gsap.set(".twelvth-section .image-component-10", {margin: "10em 0 6rem"})
+}else{
+    const videoHeight = 0.63 * astronutPhone.clientHeight
+    const videoWidth = 0.68 * astronutPhone.clientWidth
+    const interfaceHeight = 0.99 * astronutPhone.clientHeight
+    const interfaceWidth =  0.9 * astronutPhone.clientWidth
+    gsap.set(".astronut-video video", {width: videoWidth, height: videoHeight})
+    gsap.set(".astronut-video .phone-interface", {width: interfaceWidth, height: interfaceHeight})    
+    gsap.set(".twelvth-section .image-component-10", {margin: "13em 0 6rem"})
+}
+
 
 gsap.set(".twelvth-section .astronut-video", {transform: "translateY(-12rem)"})
 const twelvthPageVideo = gsap.timeline({
@@ -380,7 +429,6 @@ const twelvthPageVideo = gsap.timeline({
 
 gsap.set(".twelvth-section .astronut-video", {transform: "scale(3.5)"})
 gsap.set(".twelvth-section .twelvth-section-heading", {padding: "6rem 0 0"})
-gsap.set(".twelvth-section .image-component-10", {margin: "10em 0 6rem"})
 
 twelvthPageVideo.fromTo(
     ".twelvth-section .astronut-video",
@@ -627,29 +675,46 @@ const fourteenthPage= gsap.timeline({
     }
 })
 
-fourteenthPage.fromTo(
-    fourteenthPageHeadingLeft,
-    8,
-    {x: 0},
-    {x: 150,}
-)
-fourteenthPage.fromTo(
-    fourteenthPageHeadingRight,
-    8,
-    {x: 0},
-    {x: -150,},
-    "<"
-)
+if(currentScreenSize !== "mobile"){
+    fourteenthPage.fromTo(
+        fourteenthPageHeadingLeft,
+        8,
+        {x: 0},
+        {x: 150,}
+    )
+    fourteenthPage.fromTo(
+        fourteenthPageHeadingRight,
+        8,
+        {x: 0},
+        {x: -150,},
+        "<"
+    )
+}else{
+    fourteenthPage.fromTo(
+        `.fourteenth-section-heading .large-text span:nth-child(3)`,
+        8,
+        {x: 40},
+        {x: 0}
+    )
+    fourteenthPage.fromTo(
+        `.fourteenth-section-heading .large-text span:nth-child(5)`,
+        8,
+        {x: 60},
+        {x: 0},
+        "<"
+    )
+}
+
 fourteenthPage.fromTo(
     ".fourteenth-section-heading .small-text",
-    {y: 50},
-    {y: 0,},
-    "-80%"
+    {opacity: 0},
+    {opacity: 1},
+    "<50%"
 )
 fourteenthPage.fromTo(
-    ".fourteenth-section .astronut-video img",
-    {y: 100},
-    {y: 0,},
+    ".fourteenth-section .astronut-photo img",
+    {y: 200},
+    {y: 0},
     "<"
 )
 fourteenthPage.fromTo(
@@ -711,7 +776,8 @@ if(currentScreenSize !== "mobile"){
             scrub: true
         }
     })
-    
+
+if(currentScreenSize !== "mobile"){
     fifteenthPage.fromTo(
         fifteenthPageHeadingLeft,
         {x: 0},
@@ -723,6 +789,21 @@ if(currentScreenSize !== "mobile"){
         {x: -150},
         "<"
     )
+}else{
+    fifteenthPage.fromTo(
+        `.fifteenth-section-heading .large-text span:nth-child(3)`,
+        8,
+        {x: 40},
+        {x: 0}
+    )
+    fifteenthPage.fromTo(
+        `.fifteenth-section-heading .large-text span:nth-child(5)`,
+        8,
+        {x: 60},
+        {x: 0},
+        "<"
+    )
+}
     
     const cameraLabels= gsap.timeline({
         scrollTrigger:{
@@ -808,7 +889,6 @@ if(currentScreenSize !== "mobile"){
         {y: 0, opacity: 1},
     )
 }else{
-    const line = document.querySelectorAll(".line:after")
     const cameraLabels= gsap.timeline({
         scrollTrigger:{
             trigger: ".fifteenth-section .phone-container",  
@@ -821,8 +901,10 @@ if(currentScreenSize !== "mobile"){
         }
     })
     
+    let line = CSSRulePlugin.getRule(".camera-label-1 .line::after");    
+    console.log(line)
     gsap.set(".fifteenth-section", {height: "270vh"})
-    gsap.set(line, {height: "0%", opacity: 0})
+    gsap.set(line, {cssRule:{height: "0%", opacity: 0}})
     cameraLabels.fromTo(
         ".camera-label-1",
         {y: "350%", opacity: 0},
@@ -831,7 +913,7 @@ if(currentScreenSize !== "mobile"){
     cameraLabels.fromTo(
         line,
         {height: "0%", opacity: 0},
-        {height: "7.2rem", opacity: 1},
+        {height: "0%", opacity: 1},
     )
     cameraLabels.to(
         ".camera-label-1",

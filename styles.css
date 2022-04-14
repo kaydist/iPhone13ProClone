@@ -1214,6 +1214,10 @@ nav button{
         display: grid;
         grid-template-rows: repeat(2, 1fr)
     }
+
+    .swatch-container p{
+        font-size: 1.2rem;
+    }
     .fifth-section > .fifth-section-left{
         grid-column: 1;
         grid-row: 2; /* NEW */
@@ -1371,6 +1375,40 @@ nav button{
         float: right;
     }
 
+
+    .twelvth-section .astronut-video video{
+        object-fit: fill;
+        position: absolute;
+        top: 30%;
+        left: 49.75%;
+        transform: translate(-49.75%, -30%);
+        z-index: 3;
+    }
+    
+    
+    .twelvth-section .astronut-video .phone-casing{
+        position: relative;
+        z-index: 2;
+        width: 75%;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -0%);
+        transform-origin: center left;
+    }
+    
+    .twelvth-section .astronut-video .phone-interface{
+        border-radius: 2rem;
+        position: absolute;
+        z-index: 1;
+        top: 6%;
+        left: 50%;
+        transform: translate(-50%, -6%);
+    }
+
+    .twelvth-section .image-component-10{
+        margin: 2em 0 6em;
+    }
+
     .fourteenth-section, .sixteenth-section .image-component-16{
         padding: 5rem 0;
     }
@@ -1427,7 +1465,7 @@ nav button{
         width: 70%;
         position: relative;
     }
-    .line:after{
+    .line::after{
         position: absolute;
         border-right: 0.1rem solid white;
         content: "";

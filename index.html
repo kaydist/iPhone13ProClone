@@ -298,9 +298,18 @@
       </p>
       </div>
       <div class="astronut-video">
-        <video src="./videos/iPhone 13 Pro and iPhone 13 Pro Max - Apple (NG)_6.mp4" muted autoplay loop></video>
+        <!-- <video src="./videos/iPhone 13 Pro and iPhone 13 Pro Max - Apple (NG)_6.mp4" muted autoplay loop></video> -->
+        <video 
+        muted autoplay loop 
+        data-desktop-vid="./videos/iPhone 13 Pro and iPhone 13 Pro Max - Apple (NG)_6.mp4" 
+        data-mobile-vid="/videos/iPhone 13 Pro and iPhone 13 Pro Max - Apple (NG)_6_small_2x.mp4"
+        >
+        </video>
 
-        <img src="./images/cinematic_mode_screen__f14s45dcw4a6_medium_2x.jpg" alt="" class="phone-interface">
+        <picture>
+          <source media="(max-width:767px)" srcset="./images/cinematic_mode_screen__f14s45dcw4a6_small_2x.jpg">
+          <img src="./images/cinematic_mode_screen__f14s45dcw4a6_medium_2x.jpg" alt="" class="phone-interface">
+        </picture>
         <img src="./images/customize_camera_hw__bgxgvyqrcgvm_large.png" alt="" class="phone-casing">
         
       </div>
@@ -544,6 +553,7 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/CSSRulePlugin.min.js" integrity="sha512-1z2hYE5HWzZW8cAJRhlwT472AGZC3HlJyWYmW3SXG/Qh0S6TFdkYEqJaPwT7eCy9tI4KvwrRVK6IGqtqErpHQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./animation.js"></script>
 </body>
 </html>
