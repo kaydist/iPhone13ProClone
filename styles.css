@@ -957,12 +957,13 @@ nav button{
 }
 .fourteenth-section-heading .small-text{
     font-size: 2.5rem;
-    margin-top: 4rem;
+    margin: 4rem;
 }
 
 .fourteenth-section .astronut-photo{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     position: relative;   
 }
@@ -970,11 +971,11 @@ nav button{
 .fourteenth-section .astronut-photo img{
     position: relative;
     z-index: 1;
-    transform: scale(0.7);
+    transform: scale(1);
 }
 
 .fourteenth-section .image-component-14{
-    padding: 0 20%;
+    padding: 5rem 20%;
 }
 
 .image-component-14 .image-component-desc p{
@@ -1085,11 +1086,18 @@ nav button{
 
 .camera-label{
     position: absolute;
+    font-size: 1.2rem;
 }
 .camera-label p{
     max-width: 12rem;
     font-weight: 500;
 }
+
+.camera-label div{
+    display: flex;
+    flex-direction: column;
+}
+
 .line{
     border-bottom: 0.01rem solid #ffffff;
     display: block;
@@ -1168,6 +1176,7 @@ nav button{
     position: relative;
     z-index: 1;
     gap: 4em;
+    max-width: 70%;
 }
 
 
@@ -1277,7 +1286,7 @@ nav button{
         gap: 2rem;    
     }
 
-    .image-component-1, .image-component-3, .image-component-5, .image-component-7, .image-component-12, .image-component-13{
+    .image-component-1, .image-component-3, .image-component-5, .image-component-7, .image-component-12, .image-component-13, .camera-label div{
         flex-direction: column-reverse;
     }
 
@@ -1390,6 +1399,69 @@ nav button{
     }
     .fourteenth-section-sub-2 .fourteenth-section-heading img{
         margin: 20% 0;
+    }
+
+
+    .phone-container{
+        width: 100%;
+        margin-top: 10em;
+        position: relative;
+
+    }
+    .phone-container img{
+        position: relative;
+        left: 50%;
+        bottom: 0;
+        margin-bottom: -1rem;
+        width: 90%; 
+        transform: translate(-50%, 0);
+    }
+    .camera-label p{
+        max-width: 12rem;
+        font-weight: 500;
+    }
+    .line{
+        border-bottom: none;
+        display: block;
+        margin: 0.8rem 0;
+        width: 70%;
+        position: relative;
+    }
+    .line:after{
+        position: absolute;
+        border-right: 0.1rem solid white;
+        content: "";
+        height: 100%;
+        width: 100%;
+    }
+    .label-title {
+        font-size: 1.8rem;
+    }
+    
+    .camera-label-1{
+        top: -80%;
+        left: 5%;
+        transform: translate(-5%, 80%);
+    }
+    .camera-label-1 .line{
+        height: 7.2rem;
+    }
+    .camera-label-2{
+        top: -95%;
+        left: 45%;
+        transform: translate(-45%, 95%);
+    }
+    .camera-label-2 .line{
+        height: 13.2rem;
+    }
+    .camera-label-3{
+        top: -115%;
+        left: 5%;
+        transform: translate(-5%, 115%);
+        transform-origin: top;
+    }
+    .camera-label-3 .line{
+        height: 14.8rem;
     }
 
     .hand-container img{

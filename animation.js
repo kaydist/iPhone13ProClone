@@ -697,116 +697,179 @@ component15.fromTo(
 )
 
 //15th section
-const fifteenthPage= gsap.timeline({
-    scrollTrigger:{
-        trigger: ".fifteenth-section",  
-        start: "-20%",
-        end: "-10%",
-        scrub: true
-    }
-})
 
 
 const fifteenthPageHeadingRight = document.querySelectorAll(`.fifteenth-section-heading .large-text span:nth-of-type(2n)`)
 const fifteenthPageHeadingLeft = document.querySelectorAll(`.fifteenth-section-heading .large-text span:nth-of-type(2n-1)`)
 
-fifteenthPage.fromTo(
-    fifteenthPageHeadingLeft,
-    {x: 0},
-    {x: 150, ease: Power4.easeOut}
-)
-fifteenthPage.fromTo(
-    fifteenthPageHeadingRight,
-    {x: 0},
-    {x: -150, ease: Power4.easeOut},
-    "<"
-)
-
-const cameraLabels= gsap.timeline({
-    scrollTrigger:{
-        trigger: ".fifteenth-section",  
-        start: "10%",
-        end: "60%",
-        scrub: true
-    }
-})
-
-gsap.set("line", {width: "30%", opacity: 0})
-cameraLabels.fromTo(
-    ".camera-label-1",
-    {y: 250, opacity: 0},
-    {y: 0, opacity: 1},
-)
-cameraLabels.fromTo(
-    ".camera-label-1 .label-title",
-    {y: 250, opacity: 0},
-    {y: 0, opacity: 1},
-    "<"
-)
-cameraLabels.fromTo(
-    ".camera-label-1 p",
-    {y: 250, opacity: 0},
-    {y: 0, opacity: 1},
-    "-=20%"
-)
-cameraLabels.fromTo(
-    ".camera-label-1 .line",
-    {width: "30%", opacity: 0},
-    {width: "45rem", opacity: 1},
-)
-
-cameraLabels.fromTo(
-    ".camera-label-2",
-    {y: 250, opacity: 0},
-    {y: 0, opacity: 1},
-)
-cameraLabels.fromTo(
-    ".camera-label-2 .label-title",
-    {y: 250, opacity: 0},
-    {y: 0, opacity: 1},
-    "<"
-)
-cameraLabels.fromTo(
-    ".camera-label-2 p",
-    {y: 250, opacity: 0},
-    {y: 0, opacity: 1},
-    "-=20%"
-)
-cameraLabels.fromTo(
-    ".camera-label-2 .line",
-    {width: "30%", opacity: 0},
-    {width: "45rem", opacity: 1},
-)
-
-
-cameraLabels.fromTo(
-    ".camera-label-3",
-    {y: 250, opacity: 0},
-    {y: 0, opacity: 1},
-)
-cameraLabels.fromTo(
-    ".camera-label-3 .label-title",
-    {y: 250, opacity: 0},
-    {y: 0, opacity: 1},
-    "<"
-)
-cameraLabels.fromTo(
-    ".camera-label-3 p",
-    {y: 250, opacity: 0},
-    {y: 0, opacity: 1},
-    "-=20%"
-)
-cameraLabels.fromTo(
-    ".camera-label-3 .line",
-    {width: "30%", opacity: 0},
-    {width: "45rem", opacity: 1},
-)
-cameraLabels.fromTo(
-    ".phone-container .base-text",
-    {y: 250, opacity: 0},
-    {y: 0, opacity: 1},
-)
-
+if(currentScreenSize !== "mobile"){
+    const fifteenthPage= gsap.timeline({
+        scrollTrigger:{
+            trigger: ".fifteenth-section",  
+            start: "-20%",
+            end: "-10%",
+            scrub: true
+        }
+    })
+    
+    fifteenthPage.fromTo(
+        fifteenthPageHeadingLeft,
+        {x: 0},
+        {x: 150}
+    )
+    fifteenthPage.fromTo(
+        fifteenthPageHeadingRight,
+        {x: 0},
+        {x: -150},
+        "<"
+    )
+    
+    const cameraLabels= gsap.timeline({
+        scrollTrigger:{
+            trigger: ".fifteenth-section",  
+            start: "10%",
+            end: "60%",
+            scrub: true
+        }
+    })
+    
+    gsap.set("line", {width: "30%", opacity: 0})
+    cameraLabels.fromTo(
+        ".camera-label-1",
+        {y: 250, opacity: 0},
+        {y: 0, opacity: 1},
+    )
+    cameraLabels.fromTo(
+        ".camera-label-1 .label-title",
+        {y: 250, opacity: 0},
+        {y: 0, opacity: 1},
+        "<"
+    )
+    cameraLabels.fromTo(
+        ".camera-label-1 p",
+        {y: 250, opacity: 0},
+        {y: 0, opacity: 1},
+        "-=20%"
+    )
+    cameraLabels.fromTo(
+        ".camera-label-1 .line",
+        {width: "30%", opacity: 0},
+        {width: "45rem", opacity: 1},
+    )
+    
+    cameraLabels.fromTo(
+        ".camera-label-2",
+        {y: 250, opacity: 0},
+        {y: 0, opacity: 1},
+    )
+    cameraLabels.fromTo(
+        ".camera-label-2 .label-title",
+        {y: 250, opacity: 0},
+        {y: 0, opacity: 1},
+        "<"
+    )
+    cameraLabels.fromTo(
+        ".camera-label-2 p",
+        {y: 250, opacity: 0},
+        {y: 0, opacity: 1},
+        "-=20%"
+    )
+    cameraLabels.fromTo(
+        ".camera-label-2 .line",
+        {width: "30%", opacity: 0},
+        {width: "45rem", opacity: 1},
+    )
+    
+    cameraLabels.fromTo(
+        ".camera-label-3",
+        {y: 250, opacity: 0},
+        {y: 0, opacity: 1},
+    )
+    cameraLabels.fromTo(
+        ".camera-label-3 .label-title",
+        {y: 250, opacity: 0},
+        {y: 0, opacity: 1},
+        "<"
+    )
+    cameraLabels.fromTo(
+        ".camera-label-3 p",
+        {y: 250, opacity: 0},
+        {y: 0, opacity: 1},
+        "-=20%"
+    )
+    cameraLabels.fromTo(
+        ".camera-label-3 .line",
+        {width: "30%", opacity: 0},
+        {width: "45rem", opacity: 1},
+    )
+    cameraLabels.fromTo(
+        ".phone-container .base-text",
+        {y: 250, opacity: 0},
+        {y: 0, opacity: 1},
+    )
+}else{
+    const line = document.querySelectorAll(".line:after")
+    const cameraLabels= gsap.timeline({
+        scrollTrigger:{
+            trigger: ".fifteenth-section .phone-container",  
+            markers: {startPoint: "red", endPoint: "blue"},
+            start: "-50%",
+            end: "70%",
+            scrub: true,
+            pin: true,
+            pinSpacing: false
+        }
+    })
+    
+    gsap.set(".fifteenth-section", {height: "270vh"})
+    gsap.set(line, {height: "0%", opacity: 0})
+    cameraLabels.fromTo(
+        ".camera-label-1",
+        {y: "350%", opacity: 0},
+        {y: "80%", opacity: 1},
+    )
+    cameraLabels.fromTo(
+        line,
+        {height: "0%", opacity: 0},
+        {height: "7.2rem", opacity: 1},
+    )
+    cameraLabels.to(
+        ".camera-label-1",
+        {opacity: 0},
+    )
+    
+    
+    cameraLabels.fromTo(
+        ".camera-label-2",
+        {y: "465%", opacity: 0},
+        {y: "95%", opacity: 1},
+    )
+    cameraLabels.fromTo(
+        ".camera-label-2 .line",
+        {width: "0%", opacity: 0},
+        {width: "13.2rem", opacity: 1},
+    )
+    cameraLabels.to(
+        ".camera-label-2",
+        {opacity: 0},
+    )
+    
+    
+    cameraLabels.fromTo(
+        ".camera-label-3",
+        {y: "585%", opacity: 0},
+        {y: "115%", opacity: 1},
+    )
+    cameraLabels.fromTo(
+        ".camera-label-3 .line",
+        {width: "0%", opacity: 0},
+        {width: "14.8rem", opacity: 1},
+    )
+    cameraLabels.to(
+        ".camera-label-3",
+        {opacity: 0},
+    )
+}
 
 //16th section
 if(currentScreenSize !== "mobile"){
@@ -846,7 +909,7 @@ if(currentScreenSize !== "mobile"){
     )
 }else{
     gsap.set(".sixteenth-section .sixteenth-section-heading", {opacity: "0", padding: "0rem 5%"})
-    gsap.set(".hand-container img", {top: "90%", left: "40%", transform: "translate(-40%, 90%) scale(2)", transformOrigin: "left top"})
+    gsap.set(".hand-container img", {top: "90%", left: "45%", transform: "translate(-45%, 90%) scale(2)", transformOrigin: "left top"})
     const sixteenthPage= gsap.timeline({
         scrollTrigger:{
             trigger: ".sixteenth-section",  
@@ -870,7 +933,7 @@ if(currentScreenSize !== "mobile"){
     
     sixteenthPage.fromTo(
         ".hand-container img",
-        {top: "-45%", left: "40%", transform: "translate(-40%, 45%) scale(2)"},
+        {top: "-45%", left: "45%", transform: "translate(-45%, 45%) scale(2)"},
         {top: "-45%", left: "35%", transform: "translate(-15%, 45%) scale(1)"}
     )
     sixteenthPage.fromTo(
