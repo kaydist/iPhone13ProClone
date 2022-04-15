@@ -222,7 +222,7 @@ nav button{
     align-items: center;
 }
 .phone-gallery .phone-gallery-container img{
-    transform: scale(0.9);
+    transform: scale(0.8);
 }
 
 .swatch-container{    
@@ -234,7 +234,7 @@ nav button{
 }
 .swatch-container p{    
     text-align: center;
-    max-width: 100%;
+    max-width: 80%;
 }
 
 .swatches{
@@ -491,6 +491,7 @@ nav button{
     width: 100vw;
     height: 90vh;
     transform: scaleX(1.5);
+    object-fit: fill;
 }
 
 /* 10th section */
@@ -1066,7 +1067,8 @@ nav button{
 }
 
 .phone-container{
-    position: relative;
+    position: absolute;
+    bottom: 0;
 }
 .phone-container img{
     position: relative;
@@ -1077,7 +1079,7 @@ nav button{
 .phone-container .base-text{
     position: absolute;
     bottom: 10%;
-    right: 20%;
+    right: 25%;
     transform: translate(20%, 10%);
     font-weight: 500;
     color: #1d1d1f;
@@ -1197,7 +1199,8 @@ nav button{
     }  
     
     .third-section-text{      
-        padding: 30% 0;
+        padding: 15% 0;
+        font-size: 1.2rem;
     }
 
     .third-section-text{ 
@@ -1342,6 +1345,7 @@ nav button{
 
     .customize-text{
         margin-bottom: 20em;
+        gap: 6rem;
     }
     .customize-camera-phone{
         top: 20%;
@@ -1425,11 +1429,13 @@ nav button{
     }
 
     .fourteenth-section .astronut-photo{
-        max-height: 80vh;
         align-items: center;
     }
     .fourteenth-section .astronut-photo img{
         transform: scale(0.6);
+    }
+    .fourteenth-section-sub-2-fusion{
+        gap: 2rem;
     }
     .fourteenth-section .fourteenth-section-heading img, .fourteenth-section-sub-2-fusion .deep-fusion-img-2 img{
         height: 95vh;
@@ -1477,20 +1483,20 @@ nav button{
     }
     
     .camera-label-1{
-        top: -80%;
+        top: -75%;
         left: 5%;
-        transform: translate(-5%, 80%);
+        transform: translate(-5%, 75%);
     }
     .camera-label-1 .line{
         height: 7.2rem;
     }
     .camera-label-2{
-        top: -95%;
+        top: -100%;
         left: 45%;
-        transform: translate(-45%, 95%);
+        transform: translate(-45%, 100%);
     }
     .camera-label-2 .line{
-        height: 13.2rem;
+        height: 15.3rem;
     }
     .camera-label-3{
         top: -115%;
@@ -1499,7 +1505,7 @@ nav button{
         transform-origin: top;
     }
     .camera-label-3 .line{
-        height: 14.8rem;
+        height: 16.3rem;
     }
 
     .hand-container img{
