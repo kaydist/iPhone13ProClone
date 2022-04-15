@@ -1067,7 +1067,7 @@ nav button{
 }
 
 .phone-container{
-    position: absolute;
+    position: relative;
     bottom: 0;
 }
 .phone-container img{
@@ -1311,7 +1311,7 @@ nav button{
         font-size: 1.8rem;
     }
 
-    .image-component-1 .image-component-desc-body, .image-component-1 .image-component-desc-heading, .image-component-5 div, .image-components-5 img, .image-component-5 .image-component-desc, .image-component-7 img, .image-component-8 .image-component-desc, .image-component-10 .image-component-desc p, .image-component-12 .image-component-desc, .image-component-13 .image-component-desc p, .image-component-14 .image-component-desc p, .fourteenth-section-sub-2-fusion .image-component-18 span, .fourteenth-section-sub-2-fusion .deep-fusion-img-2 img, .image-component-15 .image-component-desc p{
+    .image-component-1 .image-component-desc-body, .image-component-1 .image-component-desc-heading, .image-component-5 div, .image-components-5 img, .image-component-5 .image-component-desc, .image-component-7 img, .image-component-8 .image-component-desc, .image-component-10 .image-component-desc p, .image-component-12 .image-component-desc, .image-component-13 .image-component-desc p, .image-component-14 .image-component-desc p, .fourteenth-section-sub-2-fusion .image-component-18 span, .fourteenth-section-sub-2-fusion .deep-fusion-img-2 img, .image-component-15 .image-component-desc p, .image-component-14 span{
         max-width: 100%;
     }
 

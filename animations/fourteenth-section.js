@@ -49,7 +49,7 @@ fourteenthPage.fromTo(
 )
 fourteenthPage.fromTo(
     ".fourteenth-section .astronut-photo img",
-    {y: 200},
+    {y: 80},
     {y: 0},
     "<"
 )
@@ -58,9 +58,9 @@ fourteenthPage.fromTo(
     {y: 80, opacity: 0},
     {y: 0, opacity: 1,
         scrollTrigger:{
-            trigger: ".fourteenth-section .astronut-photo img",  
-            start: "-25%",
-            end: "5%",
+            trigger: ".fourteenth-section .image-component-14",
+            start: "top bottom",
+            end: "top 70%",
             scrub: true
         }
     }

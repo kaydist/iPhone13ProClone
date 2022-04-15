@@ -135,9 +135,9 @@ ninthPage.fromTo(
     {y: 200, opacity: 0},
     {y: 0, opacity: 1,
         scrollTrigger:{
-            trigger: ".ninth-section img",
-            start: "20%",
-            end: "70%",
+            trigger: ".ninth-section-columns-1 div",
+            start: "top bottom",
+            end: "top 70%",
             scrub: true
         }
     }
@@ -147,9 +147,9 @@ ninthPage.fromTo(
     {y: 200, opacity: 0},
     {y: 0, opacity: 1,
         scrollTrigger:{
-            trigger: ".ninth-section video",
-            start: "0%",
-            end: "50%",
+            trigger: ".ninth-section-columns-2",
+            start: "top bottom",
+            end: "top 70%",
             scrub: true
         }
     }
