@@ -7,23 +7,24 @@
 html{
     font-family: 'Poppins', sans-serif;
     color: rgb(29, 29, 31);
-    font-size: 1.1vw;
+    /* font-size: 1.1vw; */
 }
 body{
     overflow-x: hidden;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;    
+    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 @media screen and (max-width: 767px){
     html{
         font-family: 'Poppins', sans-serif;
         color: rgb(29, 29, 31);
-        font-size: 100%;
+        /* font-size: 100%; */
     }
     body{
         overflow-x: hidden;
         scroll-behavior: smooth;
-        font-size: 1.8rem;
+        /* font-size: 1.8rem; */
     }
 }
 
@@ -835,13 +836,16 @@ nav button{
     font-size: 7rem;
 }
 
+.customize-camera-right-container{
+    position: relative;
+}
 
 .customize-camera-phone{
     position: absolute;
     width: fit-content;
-    right: 50%;
+    right: 35%;
     bottom: -20%;
-    transform: translate(50%, 20%);
+    transform: translate(-35%, 20%);
     transform-origin: top;
 }
 
@@ -1347,9 +1351,15 @@ nav button{
         margin-bottom: 20em;
         gap: 6rem;
     }
+
+    .customize-camera-right-container{
+        min-height: 40rem;
+        overflow: visible;
+    }
     .customize-camera-phone{
-        top: 20%;
+        top: -20%;
         right: 30%;
+        max-height: 100%;
     }
 
     .customize-camera-phone img {
@@ -1358,6 +1368,7 @@ nav button{
     .customize-camera-phone video {  
         left: 51%;
         border-radius: 3.2rem;
+        max-height: 100%
     }
     .image-component-12 img {
         float: left;
