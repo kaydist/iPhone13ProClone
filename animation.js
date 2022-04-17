@@ -67,64 +67,76 @@ const sixthPage = gsap.timeline({
 
 //eight page
 
-// if(window.innerWidth >= "768"){
-//     const eighthPageImgIn = gsap.timeline({
-//         scrollTrigger:{
-//             trigger: ".eighth-section",
-//             markers: {startPoint: "red", endPoint: "green"},
-//             start: "-15%",
-//             end: "0%",
-//             scrub: true,
-//         }
-//     })
-//     gsap.set(".eighth-section img", {top: "30%"})
-//     eighthPageImgIn.fromTo(
-//         ".eighth-section img",
-//         {y: 500},
-//         {y: 0}
-//     )
-//     gsap.set(".eighth-section p", {padding: "90vh 10% 1em"})
+if(window.innerWidth >= "768"){
+    const eighthPageImgIn = gsap.timeline({
+        scrollTrigger:{
+            trigger: ".eighth-section",
+            start: "top 70%",
+            end: "top 60%",
+            scrub: true,
+        }
+    })    
+    gsap.set(".eighth-section p", {padding: "100vh 5em 1em"})
+    gsap.set(".eighth-section img", {top: "5%"})
+    eighthPageImgIn.fromTo(
+        ".eighth-section img",
+        {y: 500},
+        {y: 0}
+    )
+    const eighthPageImgCon = gsap.timeline({
+        scrollTrigger:{
+            trigger: ".eighth-section img",
+            start: "top 70%",
+            end: "25%",
+            scrub: true,
+            pin: ".eighth-section img",
+            pinSpacing: false,
+        },
+    })
+    eighthPageImgCon.fromTo(
+        ".eighth-section img",
+        {y: 0},
+        {y: -50}
+    )
+    eighthPageImgCon.to(
+        ".eighth-section p",
+        {y: "-50%"},
+        "<"
+    )
 
-// }else{    
-//     const eighthPageImgIn = gsap.timeline({
-//         scrollTrigger:{
-//             trigger: ".eighth-section",
-//             markers: {startPoint: "red", endPoint: "green"},
-//             start: "-400em",
-//             end: "-350em",
-//             scrub: true,
-//         }
-//     })
-//     gsap.set(".eighth-section img", {top: "30vh"})
-//     eighthPageImgIn.fromTo(
-//         ".eighth-section img",
-//         {y: 500},
-//         {y: 0}
-//     )
-//     gsap.set(".eighth-section p", {padding: "80vh 5% 2em"})
-    
-// }
-// gsap.set(".eighth-section img", {position: "fixed"})
-// const eighthPageImgCon = gsap.timeline({
-//     scrollTrigger:{
-//         trigger: ".eighth-section",
-//         start: "-0%",
-//         end: "50%",
-//         scrub: true,
-//         pin: true,
-//         pinSpacing: false
-//     },
-// })
-// eighthPageImgCon.fromTo(
-//     ".eighth-section img",
-//     {y: 0},
-//     {y: -100}
-// )
-// eighthPageImgCon.to(
-//     ".eighth-section p",
-//     {y: "-70%"},
-//     "<"
-// )
+}else{    
+    const eighthPageImgIn = gsap.timeline({
+        scrollTrigger:{
+            trigger: ".eighth-section",
+            start: "top 90%",
+            end: "top 60%",
+            scrub: true,
+        }
+    })
+    gsap.set(".eighth-section p", {padding: "45vh 5% 2em"})
+    eighthPageImgIn.fromTo(
+        ".eighth-section img",
+        {y: "10%"},
+        {y: 0}
+    )    
+    gsap.set(".eighth-section img", {top: "5%"})
+    eighthPageImgIn.fromTo(
+        ".eighth-section img",
+        {y: 0},
+        {y: -50,
+            scrollTrigger:{
+                trigger: ".eighth-section img",
+                start: "top 80%",                
+                endTrigger: ".eighth-section p",
+                end: "bottom 75%",
+                scrub: true,
+                pin: ".eighth-section img",
+                pinSpacing: "false"
+            },
+        }
+    )
+}
+
 
 
 
@@ -321,7 +333,7 @@ thirteenthPageDetails.fromTo(
     {y: 0, opacity: 1}
 )
 thirteenthPageDetails.fromTo(
-    ".image-component-13 .image-component-desc img",
+    ".image-component-13 .right-image img",
     {y: 200},
     {y: 0}
 )

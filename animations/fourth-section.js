@@ -50,7 +50,6 @@ if(window.innerWidth >= "768"){
     const fouthPageOut = gsap.timeline({
         scrollTrigger:{
             trigger: ".fourth-section",        
-            markers: {startPoint: "pink", endPoint: "red"},
             start: "0%",
             end: "100%",
             scrub: true,

@@ -51,7 +51,6 @@ if(currentScreenSize !== "mobile"){
         }
     })
     
-    gsap.set("line", {width: "30%", opacity: 0})
     cameraLabels.fromTo(
         ".camera-label-1",
         {y: 250, opacity: 0},
@@ -130,8 +129,7 @@ if(currentScreenSize !== "mobile"){
     const cameraLabels= gsap.timeline({
         scrollTrigger:{
             trigger: ".fifteenth-section .phone-container",  
-            // markers: {startPoint: "red", endPoint: "blue"},
-            start: "-50%",
+            start: "-48%",
             end: "100%",
             scrub: true,
             pin: ".fifteenth-section",
