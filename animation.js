@@ -38,28 +38,11 @@ const firstPageOut = gsap.timeline({
         trigger: '.hero-section',
         start: "60%",
         end: "100%",
+        anticipatePin: 1,
         pin: true,
         pinSpacing: false
     }
 });
-
-
-
-//sixth page
-
-const screenStrenghtVid = document.querySelector(".sixth-section video")
-const sixthPage = gsap.timeline({
-    scrollTrigger:{
-        trigger: ".sixth-section",
-        start: "0%",
-        end: "100%",
-        onEnter: ()=> screenStrenghtVid.pause(),
-        onEnterBack: ()=> screenStrenghtVid.pause(),
-        onLeaveBack: ()=> screenStrenghtVid.play(),
-        scrub: true,
-    }
-})
-
 
 
 
@@ -167,63 +150,6 @@ ninthPage.fromTo(
     }
 )
 
-//10th page
-const tenthPage = gsap.timeline({
-    scrollTrigger:{
-        trigger: ".tenth-section",
-        start: "-10%",
-        end: "90%",
-        scrub: true
-    }
-})
-
-tenthPage.fromTo(
-    ".image-component-1 img",
-    {y: 50},
-    {y: -50}
-)
-tenthPage.fromTo(
-    ".image-component-1 .image-component-desc-body",
-    {y: 50, opacity: 0},
-    {y: 0, opacity: 1},
-    "<50%"
-)
-tenthPage.fromTo(
-    ".image-component-2 .image-component-desc",
-    {y: 150, opacity: 0},
-    {y: 0, opacity: 1},
-    ">20%"
-)
-tenthPage.fromTo(
-    ".image-component-2 img",
-    {y: 50},
-    {y: -50},
-    "<50%"
-)
-tenthPage.fromTo(
-    ".image-component-3 .image-component-desc",
-    {y: 150, opacity: 0},
-    {y: 0, opacity: 1},
-    "<80%"
-)
-tenthPage.fromTo(
-    ".image-component-4 img",
-    {y: 50},
-    {y: -50},
-    "<50%"
-)
-tenthPage.fromTo(
-    ".image-component-5 .image-component-desc",
-    {y: 150, opacity: 0},
-    {y: 0, opacity: 1},
-    ">80%"
-)
-tenthPage.fromTo(
-    ".image-component-6 .image-component-desc",
-    {y: 100, opacity: 0},
-    {y: 0, opacity: 1},
-)
-
 //11th page
 const eleventhPage = gsap.timeline({
     scrollTrigger:{
@@ -261,100 +187,3 @@ eleventhPage.fromTo(
     {y: 100, opacity: 0},
     {y: 0, opacity: 1},
 )
-
-//13th section
-const thirteenthPage= gsap.timeline({
-    scrollTrigger:{
-        trigger: ".thirteenth-section .customize-text",  
-        start: "-50%",
-        end: "20%",
-        scrub: true
-    }
-})
-
-thirteenthPage.fromTo(
-    ".thirteenth-section .customize-text .small-text",
-    {y: 250},
-    {y: 0}
-)
-thirteenthPage.fromTo(
-    ".thirteenth-section .customize-text .large-text",
-    {y: 500},
-    {y: 0},
-    "<"
-)
-thirteenthPage.fromTo(
-    ".thirteenth-section .customize-text .model-image",
-    {y: 250},
-    {y: -60},
-    "<"
-)
-thirteenthPage.fromTo(
-    ".thirteenth-section .customize-camera-phone",
-    {y: "50%"},
-    {y: "25%"},
-)
-
-const thirteenthPageDetails = gsap.timeline({
-    scrollTrigger:{
-        trigger: ".thirteenth-section .customize-text",  
-        start: "100%",
-        end: "250%",
-        scrub: true
-    }
-})
-
-thirteenthPageDetails.fromTo(
-    ".image-component-12 img",
-    {y: 150},
-    {y: -30, 
-        scrollTrigger:{
-            trigger: ".thirteenth-section .customize-text",  
-            start: "100%",
-            end: "150%",
-            scrub: true
-        }
-    }
-)
-thirteenthPageDetails.fromTo(
-    ".image-component-12 .image-component-desc-heading",
-    {y: 150, opacity: 0},
-    {y: 0, opacity: 1},
-    "-=80%"
-)
-thirteenthPageDetails.fromTo(
-    ".image-component-12 .image-component-desc-body",
-    {y: 150, opacity: 0},
-    {y: 0, opacity: 1}
-)
-thirteenthPageDetails.fromTo(
-    ".image-component-12 .image-component-desc-footer",
-    {y: 150, opacity: 0},
-    {y: 0, opacity: 1}
-)
-thirteenthPageDetails.fromTo(
-    ".image-component-13 .right-image img",
-    {y: 200},
-    {y: 0}
-)
-thirteenthPageDetails.fromTo(
-    ".image-component-13 .left-image img",
-    {y: 150},
-    {y: 0}
-)
-thirteenthPageDetails.fromTo(
-    ".image-component-13 .image-component-desc .image-component-desc-body-1",
-    {y: 150, opacity: 0},
-    {y: 0, opacity: 1}
-)
-thirteenthPageDetails.fromTo(
-    ".image-component-13 .image-component-desc .image-component-desc-body-2",
-    {y: 150, opacity: 0},
-    {y: 0, opacity: 1}
-)
-
-
-
-
-
-

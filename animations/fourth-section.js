@@ -111,3 +111,17 @@ if(window.innerWidth >= "768"){
         "<"
     )
 }
+
+
+const screenStrenghtVid = document.querySelector(".sixth-section video")
+const sixthPage = gsap.timeline({
+    scrollTrigger:{
+        trigger: ".sixth-section video",
+        start: "-5%",
+        end: "100%",
+        onEnter: ()=> screenStrenghtVid.pause(),
+        onEnterBack: ()=> screenStrenghtVid.pause(),
+        onLeaveBack: ()=> screenStrenghtVid.play(),
+        scrub: true,
+    }
+})
