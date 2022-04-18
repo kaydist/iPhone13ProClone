@@ -815,12 +815,9 @@ nav button{
     width: 100vw;
     padding: 8rem 0;
     background-color: #fbfbfd;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
-.thirteenth-section *{
-    overflow-y: visible;
-}
 .customize-text{
     min-height: fit-content;
     margin-bottom: 35rem;
