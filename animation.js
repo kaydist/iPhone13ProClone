@@ -19,7 +19,7 @@ function animateText(elem){
 document.addEventListener("DOMContentLoaded", function(){
     gsap.utils.toArray(".animated-text").forEach((elem)=>{
         hide(elem)
-        var y = 100
+        var y = 50
         elem.style.transform = "translateY("+ y + "px)";
         elem.style.opacity = "0";
         gsap.fromTo(
@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function(){
                 overwrite: "auto",
                 scrollTrigger: {
                     trigger: elem,
-                    start: "top bottom",
-                    end: "top 75%",
+                    start: "top 90%",
+                    end: "top 50%",
                     scrub: true,
                 }
             }
@@ -86,73 +86,73 @@ const firstPageOut = gsap.timeline({
 
 
 //eight page
-
-if(window.innerWidth >= "768"){
-    const eighthPageImgIn = gsap.timeline({
-        scrollTrigger:{
-            trigger: ".eighth-section",
-            start: "top 70%",
-            end: "top 60%",
-            scrub: true,
-        }
-    })    
-    gsap.set(".eighth-section", {padding: "0 0 28em"})
-    gsap.set(".eighth-section p", {padding: "60vh 5em 0"})
-    eighthPageImgIn.fromTo(
-        ".eighth-section img",
-        {y: "10%"},
-        {y: 0}
-    )    
-    gsap.set(".eighth-section img", {top: "5%"})
-    eighthPageImgIn.fromTo(
-        ".eighth-section img",
-        {y: 0},
-        {y: -50,
+document.addEventListener("DOMContentLoaded", function(){
+    if(currentScreenSize !== "mobile"){
+        const eighthPageImgIn = gsap.timeline({
             scrollTrigger:{
-                trigger: ".eighth-section img",
-                start: "top 70%",                
-                endTrigger: ".eighth-section p",
-                end: "bottom 60%",
+                trigger: ".eighth-section",
+                start: "top 70%",
+                end: "top 60%",
                 scrub: true,
-                pin: ".eighth-section img",
-                pinSpacing: "false"
-            },
-        }
-    )
+            }
+        })    
+        gsap.set(".eighth-section", {padding: "0 0 28em"})
+        gsap.set(".eighth-section p", {padding: "60vh 5em 0"})
+        eighthPageImgIn.fromTo(
+            ".eighth-section img",
+            {y: "10%"},
+            {y: 0}
+        )    
+        gsap.set(".eighth-section img", {top: "5%"})
+        eighthPageImgIn.fromTo(
+            ".eighth-section img",
+            {y: 0},
+            {y: -50,
+                scrollTrigger:{
+                    trigger: ".eighth-section img",
+                    start: "top 70%",                
+                    endTrigger: ".eighth-section p",
+                    end: "bottom 60%",
+                    scrub: true,
+                    pin: ".eighth-section img",
+                    pinSpacing: "false"
+                },
+            }
+        )
 
-}else{    
-    const eighthPageImgIn = gsap.timeline({
-        scrollTrigger:{
-            trigger: ".eighth-section",
-            start: "top 90%",
-            end: "top 60%",
-            scrub: true,
-        }
-    })
-    gsap.set(".eighth-section p", {padding: "45vh 5% 2em"})
-    eighthPageImgIn.fromTo(
-        ".eighth-section img",
-        {y: "10%"},
-        {y: 0}
-    )    
-    gsap.set(".eighth-section img", {top: "5%"})
-    eighthPageImgIn.fromTo(
-        ".eighth-section img",
-        {y: 0},
-        {y: -50,
+    }else{    
+        const eighthPageImgIn = gsap.timeline({
             scrollTrigger:{
-                trigger: ".eighth-section img",
-                start: "top 80%",                
-                endTrigger: ".eighth-section p",
-                end: "bottom 75%",
+                trigger: ".eighth-section",
+                start: "top 90%",
+                end: "top 60%",
                 scrub: true,
-                pin: ".eighth-section img",
-                pinSpacing: "false"
-            },
-        }
-    )
-}
-
+            }
+        })
+        gsap.set(".eighth-section p", {padding: "45vh 5% 2em"})
+        eighthPageImgIn.fromTo(
+            ".eighth-section img",
+            {y: "10%"},
+            {y: 0}
+        )    
+        gsap.set(".eighth-section img", {top: "5%"})
+        eighthPageImgIn.fromTo(
+            ".eighth-section img",
+            {y: 0},
+            {y: -50,
+                scrollTrigger:{
+                    trigger: ".eighth-section img",
+                    start: "top 80%",                
+                    endTrigger: ".eighth-section p",
+                    end: "bottom 75%",
+                    scrub: true,
+                    pin: ".eighth-section img",
+                    pinSpacing: "false"
+                },
+            }
+        )
+    }
+})
 
 
 //11th page

@@ -159,7 +159,7 @@ if(currentScreenSize !== "mobile"){
     cameraLabels.fromTo(
         ".camera-label-2",
         {y: "200%", opacity: 0},
-        {y: "100%", opacity: 1},
+        {y: "105%", opacity: 1},
     )
     cameraLabels.fromTo(
         `.camera-label-2 ${line}`,

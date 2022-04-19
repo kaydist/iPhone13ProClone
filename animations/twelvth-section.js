@@ -44,44 +44,46 @@ function videoSize() {
         });
     }
 }
-
+videoSize()
 
 
 let videoHeight = 0
 let videoWidth = 0
 let interfaceHeight = 0
 let interfaceWidth = 0
-if(currentScreenSize !== "mobile"){
-    const getSizeProminse = new Promise((resolve, reject) =>{
-            videoSize()
-            videoHeight = 0.58 * astronutPhone.clientHeight
-            videoWidth = 0.53 * astronutPhone.clientWidth
-            interfaceHeight = 0.98 * astronutPhone.clientHeight
-            interfaceWidth =  0.9 * astronutPhone.clientWidth
-            resolve("Ok")
-        }
-    )
-    getSizeProminse.then(()=>{
-        gsap.set(".astronut-video video", {width: videoHeight, height: videoWidth})
-        gsap.set(".astronut-video .phone-interface", {width: interfaceHeight, height: interfaceWidth})         
-        gsap.set(".twelvth-section .image-component-10", {margin: "10em 0 6rem"})   
-    })
-}else{
-    const getSizeProminse = new Promise((resolve, reject) =>{        
-        videoSize();
-        videoHeight = 0.63 * astronutPhone.clientHeight
-        videoWidth = 0.68 * astronutPhone.clientWidth
-        interfaceHeight = 0.99 * astronutPhone.clientHeight
-        interfaceWidth =  0.9 * astronutPhone.clientWidth
-        resolve("Ok")
-    })
-    getSizeProminse.then(()=>{ 
-        gsap.set(".astronut-video video", {width: videoWidth, height: videoHeight})
-        gsap.set(".astronut-video .phone-interface", {width: interfaceWidth, height: interfaceHeight})    
-        gsap.set(".twelvth-section .image-component-10", {margin: "25rem 0 6rem"})    
-    })
 
-}
+document.addEventListener("DOMContentLoaded", function(){
+    if(currentScreenSize !== "mobile"){
+        const getSizeProminse = new Promise((resolve, reject) =>{
+                videoHeight = 0.58 * astronutPhone.clientHeight
+                videoWidth = 0.53 * astronutPhone.clientWidth
+                interfaceHeight = 0.98 * astronutPhone.clientHeight
+                interfaceWidth =  0.9 * astronutPhone.clientWidth
+                resolve("Ok")
+            }
+        )
+        getSizeProminse.then(()=>{
+            gsap.set(".astronut-video video", {width: videoHeight, height: videoWidth})
+            gsap.set(".astronut-video .phone-interface", {width: interfaceHeight, height: interfaceWidth})         
+            gsap.set(".twelvth-section .image-component-10", {margin: "10em 0 6rem"})   
+        })
+    }else{
+        const getSizeProminse = new Promise((resolve, reject) =>{        
+            videoHeight = 0.63 * astronutPhone.clientHeight
+            videoWidth = 0.68 * astronutPhone.clientWidth
+            interfaceHeight = 0.99 * astronutPhone.clientHeight
+            interfaceWidth =  0.9 * astronutPhone.clientWidth
+            resolve(()=>{ console.log("Ok")})
+            reject(()=>{ console.log("Not Ok")})
+        })
+        getSizeProminse.then(()=>{ 
+            gsap.set(".astronut-video video", {width: videoWidth, height: videoHeight})
+            gsap.set(".astronut-video .phone-interface", {width: interfaceWidth, height: interfaceHeight})    
+            gsap.set(".twelvth-section .image-component-10", {margin: "25rem 0 6rem"})    
+        })
+
+    }
+})
 
 
 gsap.set(".twelvth-section .astronut-video", {transform: "translateY(-12rem)"})
