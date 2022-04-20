@@ -47,45 +47,14 @@ function videoSize() {
 videoSize()
 
 
-let videoHeight = 0
-let videoWidth = 0
-let interfaceHeight = 0
-let interfaceWidth = 0
 
 document.addEventListener("DOMContentLoaded", function(){
     if(currentScreenSize !== "mobile"){
-        const getSizeProminse = new Promise((resolve, reject) =>{
-                videoHeight = 0.58 * astronutPhone.clientHeight
-                videoWidth = 0.53 * astronutPhone.clientWidth
-                interfaceHeight = 0.98 * astronutPhone.clientHeight
-                interfaceWidth =  0.9 * astronutPhone.clientWidth
-                resolve("Ok")
-            }
-        )
-        getSizeProminse.then(()=>{
-            gsap.set(".astronut-video video", {width: videoHeight, height: videoWidth})
-            gsap.set(".astronut-video .phone-interface", {width: interfaceHeight, height: interfaceWidth})         
-            gsap.set(".twelvth-section .image-component-10", {margin: "10em 0 6rem"})   
-        })
+        gsap.set(".twelvth-section .image-component-10", {margin: "10em 0 6rem"})  
     }else{
-        const getSizeProminse = new Promise((resolve, reject) =>{        
-            videoHeight = 0.63 * astronutPhone.clientHeight
-            videoWidth = 0.68 * astronutPhone.clientWidth
-            interfaceHeight = 0.99 * astronutPhone.clientHeight
-            interfaceWidth =  0.9 * astronutPhone.clientWidth
-            resolve(()=>{ console.log("Ok")})
-            reject(()=>{ console.log("Not Ok")})
-        })
-        getSizeProminse.then(()=>{ 
-            gsap.set(".astronut-video video", {width: videoWidth, height: videoHeight})
-            gsap.set(".astronut-video .phone-interface", {width: interfaceWidth, height: interfaceHeight})    
-            gsap.set(".twelvth-section .image-component-10", {margin: "25rem 0 6rem"})    
-        })
-
+        gsap.set(".twelvth-section .image-component-10", {margin: "25rem 0 6rem"})    
     }
 })
-
-
 gsap.set(".twelvth-section .astronut-video", {transform: "translateY(-12rem)"})
 const twelvthPageVideo = gsap.timeline({
     scrollTrigger:{
@@ -96,6 +65,7 @@ const twelvthPageVideo = gsap.timeline({
         start: "35%",
         end: "65%",
         scrub: true,
+        anticipatePin: 1,
         pin: true,
         pinSpacing: false
     }
@@ -107,7 +77,7 @@ gsap.set(".twelvth-section .twelvth-section-heading", {padding: "6rem 0 0"})
 twelvthPageVideo.fromTo(
     ".twelvth-section .astronut-video",
     {transform: "translateY(-12rem) scale(3.5)", transformOrigin: "top"},
-    {transform: "translateY(25%) scale(1)", transformOrigin: "top"},
+    {transform: "translateY(30%) scale(1)", transformOrigin: "top"},
 )
 
 twelvthPageVideo.fromTo(

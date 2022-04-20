@@ -756,6 +756,8 @@ nav button{
     flex-direction: column;
     position: relative; 
     min-width: fit-content;
+    transform: translateY(0) scale(1);
+    will-change: transform;
 }
 .twelvth-section .astronut-video video{
     object-fit: fill;
@@ -764,6 +766,8 @@ nav button{
     left: 49.75%;
     transform: translate(-49.75%, -13%);
     z-index: 3;
+    width: 40%;
+    height: 28%;
 }
 
 
@@ -784,6 +788,8 @@ nav button{
     top: 6%;
     left: 50%;
     transform: translate(-50%, -6%);
+    width: 69.5%;
+    height: 45%;
 }
 
 .twelvth-section .image-component-10{
@@ -1413,6 +1419,8 @@ nav button{
         left: 49.75%;
         transform: translate(-49.75%, -30%);
         z-index: 3;
+        width: 63%;
+        height: 63%;
     }
     
     
@@ -1427,12 +1435,14 @@ nav button{
     }
     
     .twelvth-section .astronut-video .phone-interface{
-        border-radius: 2rem;
+        border-radius: 3rem;
         position: absolute;
         z-index: 1;
         top: 6%;
         left: 50%;
         transform: translate(-50%, -6%);
+        width: 70%;
+        height: 99.5%;
     }
 
     .twelvth-section .image-component-10{
