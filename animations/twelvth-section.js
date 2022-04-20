@@ -73,16 +73,27 @@ const twelvthPageVideo = gsap.timeline({
     }
 })
 
-document.addEventListener("DOMContentLoaded", function(){
-gsap.set(".twelvth-section .astronut-video", {transform: "scale(4)"})
-// gsap.set(".twelvth-section .twelvth-section-heading", {padding: "6rem 0 0"})
-})
 
-twelvthPageVideo.fromTo(
-    ".twelvth-section .astronut-video",
-    {y: "-25%", transform: "scale(4)", transformOrigin: "top"},
-    {y: "33%", transform: "scale(1)", transformOrigin: "top"},
-)
+
+if(currentScreenSize !== "mobile"){
+    document.addEventListener("DOMContentLoaded", function(){
+        gsap.set(".twelvth-section .astronut-video", {transform: "scale(4)"})
+        })
+    twelvthPageVideo.fromTo(
+        ".twelvth-section .astronut-video",
+        {y: "-25%", transform: "scale(4)", transformOrigin: "top"},
+        {y: "33%", transform: "scale(1)", transformOrigin: "top"},
+    )
+}else{
+    document.addEventListener("DOMContentLoaded", function(){
+        gsap.set(".twelvth-section .astronut-video", {transform: "scale(3.5)"})
+        })
+    twelvthPageVideo.fromTo(
+        ".twelvth-section .astronut-video",
+        {y: "-25%", transform: "scale(3.5)", transformOrigin: "top"},
+        {y: "35%", transform: "scale(1)", transformOrigin: "top"},
+    )
+}
 
 twelvthPageVideo.fromTo(
     ".twelvth-section .astronut-video img",
