@@ -61,7 +61,7 @@ gsap.set(".twelvth-section .astronut-video", {y: "-25%"})
 const twelvthPageVideo = gsap.timeline({
     scrollTrigger:{
         trigger: ".twelvth-section .astronut-video",  
-        marker: true,   
+        markers: true,   
         onEnter: ()=> astronutVideo.pause(),
         onEnterBack: ()=> astronutVideo.pause(),
         onLeaveBack: ()=> astronutVideo.play(),

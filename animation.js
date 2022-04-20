@@ -88,37 +88,53 @@ const firstPageOut = gsap.timeline({
 //eight page
 document.addEventListener("DOMContentLoaded", function(){
     if(currentScreenSize !== "mobile"){
+        gsap.set(".eighth-section img", {y:"-180%"})        
+        gsap.set(".eighth-section", {padding: "0 0 28em"})
+        gsap.set(".eighth-section p", {padding: "60vh 5em 0"})    
         const eighthPageImgIn = gsap.timeline({
             scrollTrigger:{
                 trigger: ".eighth-section",
+                markers: true,
                 start: "top 70%",
                 end: "top 60%",
                 scrub: true,
             }
         })    
-        gsap.set(".eighth-section", {padding: "0 0 28em"})
-        gsap.set(".eighth-section p", {padding: "60vh 5em 0"})
         eighthPageImgIn.fromTo(
             ".eighth-section img",
-            {y: "10%"},
-            {y: 0}
+            {y: "-150%"},
+            {y: "-190%"}
         )    
-        gsap.set(".eighth-section img", {top: "5%"})
-        eighthPageImgIn.fromTo(
-            ".eighth-section img",
-            {y: 0},
-            {y: -50,
-                scrollTrigger:{
-                    trigger: ".eighth-section img",
-                    start: "top 70%",                
-                    endTrigger: ".eighth-section p",
-                    end: "bottom 60%",
-                    scrub: true,
-                    pin: ".eighth-section img",
-                    pinSpacing: "false"
-                },
-            }
-        )
+        // eighthPageImgIn.fromTo(
+        //     ".eighth-section img",
+        //     {y: "-190%"},
+        //     {y: "-195%",
+        //         scrollTrigger:{
+        //             trigger: ".eighth-section",
+        //             markers: true,
+        //             start: "top 70%",                
+        //             endTrigger: ".eighth-section p",
+        //             end: "bottom 60%",
+        //             scrub: true,
+        //             pin: ".eighth-section",
+        //             pinSpacing: "false"
+        //         },
+        //     }
+        // )
+        // eighthPageImgIn.to(
+        //     ".eighth-section p",
+        //     {y: "-100%",
+        //         scrollTrigger:{
+        //             trigger: ".eighth-section",
+        //             markers: true,
+        //             start: "top 70%",                
+        //             endTrigger: ".eighth-section p",
+        //             end: "bottom 40%",
+        //             scrub: true,
+        //         },
+        //     },
+        //     "<"
+        // )  
 
     }else{    
         const eighthPageImgIn = gsap.timeline({

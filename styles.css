@@ -181,11 +181,13 @@ nav button{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    will-change: transform;
 }
 
 .third-section .small-phone{
     position: relative;
     transform: translate(-40%, 5%) scale(0.6);
+    will-change: transform;
 }
 .third-section .large-phone{
     position: relative;
@@ -423,7 +425,8 @@ nav button{
     min-height: 100vh;
     width: 100vw;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: visible;
     background-color: #fbfbfd;
 }
 
@@ -434,6 +437,7 @@ nav button{
     color: #86868b;
     position: relative;
     z-index: 1;
+    background: #fbfbfd;
 }
 
 .eighth-section p strong{  
