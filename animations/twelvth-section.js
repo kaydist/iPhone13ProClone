@@ -50,34 +50,38 @@ videoSize()
 
 document.addEventListener("DOMContentLoaded", function(){
     if(currentScreenSize !== "mobile"){
-        gsap.set(".twelvth-section .image-component-10", {margin: "10em 0 6rem"})  
+        gsap.set(".twelvth-section .image-component-10", {margin: "0em 0 6rem"})  
     }else{
-        gsap.set(".twelvth-section .image-component-10", {margin: "25rem 0 6rem"})    
+        gsap.set(".twelvth-section .image-component-10", {margin: "18rem 0 6rem"})    
     }
 })
-gsap.set(".twelvth-section .astronut-video", {transform: "translateY(-12rem)"})
+// gsap.set(".twelvth-section .astronut-video", {transform: "translateY(-12rem)"})
+gsap.set(".twelvth-section", {minHeight: "90rem"})
+gsap.set(".twelvth-section .astronut-video", {y: "-25%"})
 const twelvthPageVideo = gsap.timeline({
     scrollTrigger:{
-        trigger: ".twelvth-section .astronut-video",     
+        trigger: ".twelvth-section .astronut-video",  
+        marker: true,   
         onEnter: ()=> astronutVideo.pause(),
         onEnterBack: ()=> astronutVideo.pause(),
         onLeaveBack: ()=> astronutVideo.play(),
-        start: "35%",
-        end: "65%",
+        start: "5.5%",
+        end: "20%",
         scrub: true,
         anticipatePin: 1,
-        pin: true,
-        pinSpacing: false
+        pin: ".twelvth-section",
     }
 })
 
-gsap.set(".twelvth-section .astronut-video", {transform: "scale(3.5)"})
-gsap.set(".twelvth-section .twelvth-section-heading", {padding: "6rem 0 0"})
+document.addEventListener("DOMContentLoaded", function(){
+gsap.set(".twelvth-section .astronut-video", {transform: "scale(4)"})
+// gsap.set(".twelvth-section .twelvth-section-heading", {padding: "6rem 0 0"})
+})
 
 twelvthPageVideo.fromTo(
     ".twelvth-section .astronut-video",
-    {transform: "translateY(-12rem) scale(3.5)", transformOrigin: "top"},
-    {transform: "translateY(30%) scale(1)", transformOrigin: "top"},
+    {y: "-25%", transform: "scale(4)", transformOrigin: "top"},
+    {y: "33%", transform: "scale(1)", transformOrigin: "top"},
 )
 
 twelvthPageVideo.fromTo(
@@ -87,6 +91,7 @@ twelvthPageVideo.fromTo(
         scrollTrigger:{
             trigger: ".twelvth-section .astronut-video video",
             endTrigger: ".twelvth-section .twelvth-section-heading",
+            marker: {startColor: "green"},
             start: "0%",
             end: "0%",
             scrub: true,

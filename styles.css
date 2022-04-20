@@ -756,7 +756,7 @@ nav button{
     flex-direction: column;
     position: relative; 
     min-width: fit-content;
-    transform: translateY(0) scale(1);
+    transform: scale(1);
     will-change: transform;
 }
 .twelvth-section .astronut-video video{
