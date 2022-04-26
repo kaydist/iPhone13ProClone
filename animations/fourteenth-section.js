@@ -53,18 +53,6 @@ fourteenthPage.fromTo(
     {y: 0},
     "<"
 )
-// fourteenthPage.fromTo(
-//     ".fourteenth-section .image-component-14",
-//     {y: 80, opacity: 0},
-//     {y: 0, opacity: 1,
-//         scrollTrigger:{
-//             trigger: ".fourteenth-section .image-component-14",
-//             start: "top bottom",
-//             end: "top 70%",
-//             scrub: true
-//         }
-//     }
-// )
 fourteenthPage.fromTo(
     ".fourteenth-section .image-component-18",
     {y: 80, opacity: 0},

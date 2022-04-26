@@ -57,7 +57,11 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 // gsap.set(".twelvth-section .astronut-video", {transform: "translateY(-12rem)"})
 gsap.set(".twelvth-section", {minHeight: "90rem"})
-gsap.set(".twelvth-section .astronut-video", {y: "-25%"})
+if(currentScreenSize !== 'mobile'){
+    gsap.set(".twelvth-section .astronut-video", {y: "-25%"})
+}else{
+    gsap.set(".twelvth-section .astronut-video", {y: "-30%"})
+}
 const twelvthPageVideo = gsap.timeline({
     scrollTrigger:{
         trigger: ".twelvth-section .astronut-video",  
@@ -90,7 +94,7 @@ if(currentScreenSize !== "mobile"){
         })
     twelvthPageVideo.fromTo(
         ".twelvth-section .astronut-video",
-        {y: "-25%", transform: "scale(3.5)", transformOrigin: "top"},
+        {y: "-30%", transform: "scale(3.5)", transformOrigin: "top"},
         {y: "35%", transform: "scale(1)", transformOrigin: "top"},
     )
 }

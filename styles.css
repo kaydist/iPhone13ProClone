@@ -424,9 +424,9 @@ nav button{
 .eighth-section{
     min-height: 100vh;
     width: 100vw;
+    max-width: 100vw;
     position: relative;
-    overflow-x: hidden;
-    overflow-y: visible;
+    overflow: hidden;
     background-color: #fbfbfd;
 }
 
@@ -449,7 +449,8 @@ nav button{
     bottom: 5%;
     left: 0rem;
     z-index: 2;
-    transform: translate(0rem, 5%) scale(1)
+    transform: translateY(5%) scale(1);
+    will-change: transform;
 }
 
 
