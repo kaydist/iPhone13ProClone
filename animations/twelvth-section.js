@@ -90,11 +90,11 @@ if(currentScreenSize !== "mobile"){
     )
 }else{
     document.addEventListener("DOMContentLoaded", function(){
-        gsap.set(".twelvth-section .astronut-video", {transform: "scale(3.5)"})
+        gsap.set(".twelvth-section .astronut-video", {transform: "scale(4)"})
         })
     twelvthPageVideo.fromTo(
         ".twelvth-section .astronut-video",
-        {y: "-30%", transform: "scale(3.5)", transformOrigin: "top"},
+        {y: "-30%", transform: "scale(4)", transformOrigin: "top"},
         {y: "30%", transform: "scale(1)", transformOrigin: "top"},
     )
 
