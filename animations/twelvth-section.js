@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
   if (currentScreenSize !== "mobile") {
     gsap.set(".twelvth-section .image-component-10", {
       margin: "0em 0 6rem",
-      y: "25%",
     });
     gsap.set(".twelvth-section .astronut-video", { y: "-25%" });
   } else {
@@ -75,7 +74,7 @@ if (currentScreenSize !== "mobile") {
       onEnter: () => astronutVideo.pause(),
       onEnterBack: () => astronutVideo.pause(),
       onLeaveBack: () => astronutVideo.play(),
-      start: "-13%",
+      start: "5.5%",
       endTrigger: ".twelvth-section .astronut-video",
       end: "20%",
       scrub: true,
@@ -83,9 +82,7 @@ if (currentScreenSize !== "mobile") {
       pin: ".twelvth-section",
     },
   });
-  document.addEventListener("DOMContentLoaded", function () {
-    gsap.set(".twelvth-section .astronut-video", { transform: "scale(4)" });
-  });
+  gsap.set(".twelvth-section .astronut-video", { transform: "scale(4)" });
   twelvthPageVideo.fromTo(
     ".twelvth-section .astronut-video",
     { y: "-25%", transform: "scale(4)", transformOrigin: "top" },
