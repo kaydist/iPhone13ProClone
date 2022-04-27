@@ -72,7 +72,6 @@ if (currentScreenSize !== "mobile") {
   const twelvthPageVideo = gsap.timeline({
     scrollTrigger: {
       trigger: ".twelvth-section .astronut-video video",
-      markers: true,
       onEnter: () => astronutVideo.pause(),
       onEnterBack: () => astronutVideo.pause(),
       onLeaveBack: () => astronutVideo.play(),
@@ -109,12 +108,11 @@ if (currentScreenSize !== "mobile") {
   const twelvthPageVideo = gsap.timeline({
     scrollTrigger: {
       trigger: ".twelvth-section .astronut-video video",
-      markers: true,
       onEnter: () => astronutVideo.pause(),
       onEnterBack: () => astronutVideo.pause(),
       onLeaveBack: () => astronutVideo.play(),
       start: "2%",
-      //   endTrigger: ".twelvth-section .astronut-video",
+      endTrigger: ".twelvth-section .astronut-video",
       end: "20%",
       scrub: true,
       anticipatePin: 1.5,

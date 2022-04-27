@@ -35,6 +35,22 @@ if (currentScreenSize !== "mobile"){
         "<"
     )
 }else{
+    gsap.set(
+        '.small-phone',
+        {x: '-50%'}
+    )
+    gsap.set(
+        '.large-phone',
+        {x: '50%'}
+    )
+    gsap.set(
+        '.left-text',
+        {x: '20%'}
+    )
+    gsap.set(
+        '.right-text',
+        {x: '-30%'}
+    )
     thirdPageIn.fromTo(
         ".small-phone",
         {x: "-50%"},

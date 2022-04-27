@@ -7,11 +7,9 @@
 html{
     font-family: 'Poppins', sans-serif;
     color: rgb(29, 29, 31);
-    /* font-size: 1.1vw; */
 }
 body{
-    overflow-x: hidden;
-    scroll-behavior: smooth;    
+    overflow-x: hidden;  
     font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
@@ -19,12 +17,9 @@ body{
     html{
         font-family: 'Poppins', sans-serif;
         color: rgb(29, 29, 31);
-        /* font-size: 100%; */
     }
     body{
         overflow-x: hidden;
-        scroll-behavior: smooth;
-        /* font-size: 1.8rem; */
     }
 }
 
