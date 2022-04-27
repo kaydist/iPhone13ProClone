@@ -115,7 +115,7 @@ if (currentScreenSize !== "mobile") {
           onEnterBack: () => astronutVideo.pause(),
           onLeaveBack: () => astronutVideo.play(),
           start: "10%",
-          endTrigger: ".twelvth-section .astronut-video",
+        //   endTrigger: ".twelvth-section .astronut-video",
           end: "20%",
           scrub: true,
           anticipatePin: 1.5,
@@ -138,8 +138,8 @@ if (currentScreenSize !== "mobile") {
       opacity: 1,
       scrollTrigger: {
         trigger: ".twelvth-section .astronut-video video",
-        start: "0%",
-        end: "0%",
+        start: "11%",
+        end: "11%",
         scrub: true,
       },
     }
