@@ -139,6 +139,7 @@ if (currentScreenSize !== "mobile") {
         end: "0%",
         scrub: true,
       },
-    }
+    },
+    "<"
   );
 }
