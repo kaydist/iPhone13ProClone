@@ -93,6 +93,19 @@ if (currentScreenSize !== "mobile") {
     { y: "-25%", transform: "scale(4)", transformOrigin: "top" },
     { y: "35%", transform: "scale(1)", transformOrigin: "top" }
   );
+  twelvthPageVideo.fromTo(
+    ".twelvth-section .astronut-video img",
+    { opacity: 0 },
+    {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".twelvth-section .astronut-video video",
+        start: "0%",
+        end: "0%",
+        scrub: true,
+      },
+    }
+  );
 } else {
     const twelvthPageVideo = gsap.timeline({
         scrollTrigger: {
@@ -117,18 +130,20 @@ if (currentScreenSize !== "mobile") {
     { y: "-38%", transform: "scale(3.5)", transformOrigin: "top" },
     { y: "30%", transform: "scale(1)", transformOrigin: "top" }
   );
+
+  twelvthPageVideo.fromTo(
+    ".twelvth-section .astronut-video img",
+    { opacity: 0 },
+    {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".twelvth-section .astronut-video video",
+        start: "0%",
+        end: "0%",
+        scrub: true,
+      },
+    }
+  );
 }
 
-twelvthPageVideo.fromTo(
-  ".twelvth-section .astronut-video img",
-  { opacity: 0 },
-  {
-    opacity: 1,
-    scrollTrigger: {
-      trigger: ".twelvth-section .astronut-video video",
-      start: "0%",
-      end: "0%",
-      scrub: true,
-    },
-  }
-);
+
