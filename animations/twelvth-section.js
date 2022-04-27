@@ -50,7 +50,7 @@ videoSize()
 
 document.addEventListener("DOMContentLoaded", function(){
     if(currentScreenSize !== "mobile"){
-        gsap.set(".twelvth-section .image-component-10", {margin: "0em 0 6rem"})  
+        gsap.set(".twelvth-section .image-component-10", {margin: "0em 0 6rem", y: '25%'})  
     }else{
         gsap.set(".twelvth-section .image-component-10", {margin: "18rem 0 6rem"})    
     }
@@ -64,12 +64,13 @@ if(currentScreenSize !== 'mobile'){
 }
 const twelvthPageVideo = gsap.timeline({
     scrollTrigger:{
-        trigger: ".twelvth-section .astronut-video",  
-        markers: true,   
+        trigger: ".twelvth-section .astronut-video video",  
+        markers: {startColor: "pink"},   
         onEnter: ()=> astronutVideo.pause(),
         onEnterBack: ()=> astronutVideo.pause(),
         onLeaveBack: ()=> astronutVideo.play(),
-        start: "5.5%",
+        start: "-13%",
+        endTrigger: ".twelvth-section .astronut-video",  
         end: "20%",
         scrub: true,
         anticipatePin: 1,
@@ -86,7 +87,7 @@ if(currentScreenSize !== "mobile"){
     twelvthPageVideo.fromTo(
         ".twelvth-section .astronut-video",
         {y: "-25%", transform: "scale(4)", transformOrigin: "top"},
-        {y: "33%", transform: "scale(1)", transformOrigin: "top"},
+        {y: "35%", transform: "scale(1)", transformOrigin: "top"},
     )
 }else{
     document.addEventListener("DOMContentLoaded", function(){
@@ -95,8 +96,9 @@ if(currentScreenSize !== "mobile"){
     twelvthPageVideo.fromTo(
         ".twelvth-section .astronut-video",
         {y: "-30%", transform: "scale(3.5)", transformOrigin: "top"},
-        {y: "35%", transform: "scale(1)", transformOrigin: "top"},
+        {y: "30%", transform: "scale(1)", transformOrigin: "top"},
     )
+
 }
 
 twelvthPageVideo.fromTo(
