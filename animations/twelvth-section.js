@@ -68,23 +68,23 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 gsap.set(".twelvth-section", { minHeight: "90rem" });
 
-const twelvthPageVideo = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".twelvth-section .astronut-video video",
-    markers: true,
-    onEnter: () => astronutVideo.pause(),
-    onEnterBack: () => astronutVideo.pause(),
-    onLeaveBack: () => astronutVideo.play(),
-    start: "-13%",
-    endTrigger: ".twelvth-section .astronut-video",
-    end: "20%",
-    scrub: true,
-    anticipatePin: 1.5,
-    pin: ".twelvth-section",
-  },
-});
 
 if (currentScreenSize !== "mobile") {
+    const twelvthPageVideo = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".twelvth-section .astronut-video video",
+          markers: true,
+          onEnter: () => astronutVideo.pause(),
+          onEnterBack: () => astronutVideo.pause(),
+          onLeaveBack: () => astronutVideo.play(),
+          start: "-13%",
+          endTrigger: ".twelvth-section .astronut-video",
+          end: "20%",
+          scrub: true,
+          anticipatePin: 1.5,
+          pin: ".twelvth-section",
+        },
+      });
   document.addEventListener("DOMContentLoaded", function () {
     gsap.set(".twelvth-section .astronut-video", { transform: "scale(4)" });
   });
@@ -94,6 +94,21 @@ if (currentScreenSize !== "mobile") {
     { y: "35%", transform: "scale(1)", transformOrigin: "top" }
   );
 } else {
+    const twelvthPageVideo = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".twelvth-section .astronut-video video",
+          markers: true,
+          onEnter: () => astronutVideo.pause(),
+          onEnterBack: () => astronutVideo.pause(),
+          onLeaveBack: () => astronutVideo.play(),
+          start: "3%",
+          endTrigger: ".twelvth-section .astronut-video",
+          end: "20%",
+          scrub: true,
+          anticipatePin: 1.5,
+          pin: ".twelvth-section",
+        },
+      });
   document.addEventListener("DOMContentLoaded", function () {
     gsap.set(".twelvth-section .astronut-video", { transform: "scale(3.5)" });
   });
