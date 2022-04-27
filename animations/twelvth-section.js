@@ -71,6 +71,7 @@ gsap.set(".twelvth-section", { minHeight: "90rem" });
 const twelvthPageVideo = gsap.timeline({
   scrollTrigger: {
     trigger: ".twelvth-section .astronut-video video",
+    markers: true,
     onEnter: () => astronutVideo.pause(),
     onEnterBack: () => astronutVideo.pause(),
     onLeaveBack: () => astronutVideo.play(),
