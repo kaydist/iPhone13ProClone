@@ -6,6 +6,10 @@ if (window.innerWidth >= "768") {
   currentScreenSize = "mobile";
 }
 
+
+
+
+
 function hide(elem) {
   gsap.set(elem, { autoAlpha: 0 });
 }
