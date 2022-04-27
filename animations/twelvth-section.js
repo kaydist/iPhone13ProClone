@@ -65,7 +65,6 @@ if(currentScreenSize !== 'mobile'){
 const twelvthPageVideo = gsap.timeline({
     scrollTrigger:{
         trigger: ".twelvth-section .astronut-video video",  
-        markers: {startColor: "pink"},   
         onEnter: ()=> astronutVideo.pause(),
         onEnterBack: ()=> astronutVideo.pause(),
         onLeaveBack: ()=> astronutVideo.play(),
@@ -107,8 +106,6 @@ twelvthPageVideo.fromTo(
     {opacity: 1, 
         scrollTrigger:{
             trigger: ".twelvth-section .astronut-video video",
-            endTrigger: ".twelvth-section .twelvth-section-heading",
-            marker: {startColor: "green"},
             start: "0%",
             end: "0%",
             scrub: true,
